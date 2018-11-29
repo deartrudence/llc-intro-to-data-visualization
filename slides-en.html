@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+
+<body class="en" data-duration="360">
+
+  <main>
+
+    <section class="slide intro">
+      <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
+      <h1 class="heading-bg">
+        <span>Browser extensions:<br>
+          Hack the planet!</span>
+      </h1>
+
+      <!-- FILL IN INSTRUCTOR DETAILS -->
+      <img class="instructor" src="https://placehold.it/225x225" alt="Instructor Name">
+      <h2><span class="cursive">with</span> Instructor name</h2>
+      <ul>
+        <li><a href="mailto:">hello@email.com</a></li>
+        <li><a href="http://website.com">website.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
+
+      <div class="sponsor">
+        <p>In partnership with<br><img src="framework/img/telus-logo-white.svg" alt="Telus"><br><img src="framework/img/logo-accenture.svg"
+            alt="Accenture"></p>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
+            src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a
+            prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName"
+            rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span>
+          arrow keys to navigate</p>
+      </footer>
+    </section>
+    <section class="slide welcome highlight">
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
+
+      <div class="instructions">
+        <!-- ADD WIFI INFO HERE -->
+        <h2>Get <br>Connected</h2>
+        <p><strong>Wifi:</strong> Network</p>
+        <p><strong>Password:</strong> Password</p>
+        <hr>
+
+        <h2>Download<br> & Install</h2>
+        <ol class="downloads">
+          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-intro-to-browser-extensions/archive/master.zip">http://bit.ly/llc-browser-extensions</a>
+            <ul>
+              <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
+              <li>open <em>slides.html</em> in the browser to view the slides</li>
+            </ul>
+          </li>
+          <li>Atom Editor: <a href="http://atom.io">http://atom.io</a>
+            <ul>
+              <li>Chromebook users can use <a href="https://chrome.google.com/webstore/detail/caret/fljalecfjciodhpcledpamjachpmelml?hl=en" target="_blank">Caret</a></li>
+            </ul>
+          </li>
+          <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a><p>&nbsp;</p></li>
+          </li>
+        </ol>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
+            src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a
+            prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName"
+            rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span>
+          arrow keys to navigate</p>
+      </footer>
+    </section>
+
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Introductions
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Coders' code
+
+        1. Be friendly and welcoming
+        1. Be respectful of others by choosing words and actions with care
+        1. Be mindful of how much space you take up in conversations
+        1. Ask questions
+        1. Try your best (and have fun!)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Welcome!
+
+      ##What we're going to do today
+
+      <div class="table-of-contents"></div>
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #What is a browser extension?
+
+        Browser extensions are small pieces of code that make your web browsing experience more fun, more useful, more private or more public.
+
+        ![Various browser extension icons.](framework/img/workshop/extensionExamples.png)
+
+        They usually show themselves as buttons in the top bar of your web browser and allow some extra functionality that doesn't come with your browser by default.
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Icebreaker
+
+        ##Share your name and your favourite browser extension (if you can think of one)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #What is a browser extension?
+
+        They are programs that live in your browser, but can accomplish almost anything at all.
+
+        ##Tools
+
+        * <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en-US">Ad blocker</a>
+        * <a href="https://chrome.google.com/webstore/detail/countdown/fefdcjabloofphhfcinhfbinmehfcojm?hl=en-US">Timers</a>
+        * <a href="https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk?hl=en-US">Password Managers</a>
+        * <a href="https://chrome.google.com/webstore/detail/facebook-blocker/pjaajgndmkdhodnaeeflmchheijfjnhf?hl=en-US">Facebook Blocker</a>
+
+        ##Fun
+
+        * <a href="https://chrome.google.com/webstore/detail/giphy-for-chrome/jlleokkdhkflpmghiioglgmnminbekdi?hl=en-US">Giphy</a>
+        * <a href="https://chrome.google.com/webstore/detail/bubble-shooter-html5/pfaogkfljpdfmodbmbogiiblppijleen?hl=en-US">Games</a>
+        * <a href="https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=en-US">Equalizers</a>
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Today
+
+        Today we're going to build something in the fun category of browser extensions: We're going to look at how web pages are built, then look at how we can change them.
+
+        The internet needs more cats! So we're going to build an extension that will replace every image on the page with kittens (or the animal of your choosing). It should look a little like this: <!-- .element: class="delayed" -->
+
+        ![wolfewylie's Twitter profile, with all images replaced with cat images.](framework/img/workshop/sample_page.png)<!-- .element: class="delayed" -->
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #Get Chrome ready
+
+        We'll be working in Chrome today. So to get started, we need to get Chrome to treat us like the software developers we are.
+
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](framework/img/workshop/got_this.gif)
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #Get into the extensions manager
+
+        ![Click 'Customize and and Control Google Chrome' (three dots in the top left of the browser window). Go to 'More Tools', and then click on 'Extensions'.](framework/img/workshop/chrome_extension_location.png)
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Enable developer mode
+
+        ![](framework/img/workshop/chrome_developer_mode.png)
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #Load it up!
+
+        Click on "load unpacked" to get started.
+
+        ![](framework/img/workshop/chrome_load_unpacked.png)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #The folder is the trick
+
+        Note that when you add an unpacked extension to your Chrome, you have to select the WHOLE folder, not just a file inside of it.
+
+        When you add a new unpacked extension, Chrome looks for the manifest file to see what's inside and what it should do next.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #What is code, though?
+
+        What we generally call "code" is just a set of instructions that tell a computer what to do. Code is a series of commands, that the computer knows how to execute.
+
+        There are many different languages under the umbrella of "code" but they all follow very similar concepts and are built for particular tasks.
+
+        In our case, we're writing JavaScript, which is the common language of web browsers. When we write programs for the Web, we generally write them in JavaScript.
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #Now to our files
+
+        The basics of a browser extension are pretty straight forward. All we have to kick things off are a folder of images, and a file called manifest.json.
+
+        ![The project directory, which contains an images folder and a file called manifest.json. The images folder contains 4 images: get_started16.png, get_started32.png, get_started48.png, and get_started128.png.](framework/img/workshop/first_files.png)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        # The manifest file
+
+        The manifest file is going to come up a lot in this workshop. It's the backbone of everything that your extension is and does. The manifest is where you can set the title and description, icons and all of those fancy details. But it's also where you can ask people using your extension for special permissions to control web pages.
+
+        You have a basic manifest file in your exercises folder already. You can open that and see what's inside now.
+      </script>
+    </section>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercise (5-10 minutes)
+
+        Because Chrome is paying attention to the manifest file first, the manifest file is what we can start playing with first. Spend some time familiarizing yourself with the manifest.
+
+        Can you change the name of your extension, change the version number, change the description? Each time you save your file, hit **"refresh"** on the extension in Chrome and see it change right away.
+
+
+
+        ---
+        ###Note
+
+        Every time you make a change to your code, you have to hit "refresh" on your extension before you can see the changes
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Changing the icon of your extension
+
+        Software has icons. This we know. We double-click on so many icons it's become a default behaviour for all computers everywhere. So browser extensions can also have icons.
+
+        These icons usually mean something: the shield protects us, the keyhole is for passwords ... the kitties bring us joy.
+
+        Let's add one.
+
+        Change your manifest file to include an "icons" parameter.
+
+        ```javascript
+        {
+          "name": "Getting Started Example",
+          "version": "2.0",
+          "description": "First project to build a fresh chrome extension",
+          "manifest_version": 2,
+          "icons": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
+        }
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Changing the icon
+
+        Because people arrive at your extension on different devices, you need to provide a few different sizes of your icons.
+
+        Hint: You can find some stand-in icons in the project folder that you are free to use. If you're familiar with photo editing software like Photoshop, you can also make your own.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Errors (handling them)
+
+        Sometimes you'll get an error when you try to refresh your extension. That might look like this:
+
+        ![Failed to load extension. File: ~/Documents/LLC/clc-intro-to-chrome-extensions/first-extension. Error: Manifest is not valid JSON. Line: 12, column: 4, Trailing comma not allowed.](framework/img/workshop/extension_load_error.png)
+
+        The good news: it's very clear about what's broken, showing you which line number it's on, which column (how many letters in) and in which file. This makes it much easier to go in and fix it. When you're done, click "retry" to give it another shot.
+      </script>
+    </section>
+
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #And that's it
+
+        You've made a browser extension!
+
+        ![The ending screen from Looney Toons. "That's All Folks".](framework/img/workshop/thatsall.gif)
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        ![Christina Aquilera from the TV show, the Voice, raising her hands out and saying "Just Kidding!"](framework/img/workshop/kidding.gif)
+
+        This is what we call a "Hello World" moment: Proof that the basic idea works. Now we can start building on it.
+
+        So let's look at next steps: Making it actually do something.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Give it a button
+
+        The biggest thing about browser extensions that most people are familiar with is they come with a button.
+
+        Buttons trigger actions.
+
+        But what the button looks like, and what the button triggers, that's all defined in the manifest. It looks a little like this:
+
+        ```javascript
+        "page_action": {
+          "default_icon": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
+        }
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #Press the button
+
+        ![Buddy the Elf from the movie Elf pressing all the buttons in an elevator.](framework/img/workshop/pressbutton.gif)
+
+        Buttons are really fun. We should make our button do something.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # First we need permission
+
+        The internet being what it is, and consent being a proper requirement to run our code in other people's web browsers, permissions are a big part of writing extensions.
+
+        Permissions also live in the manifest file.
+
+        ```javascript
+        "permissions": ["activeTab", "declarativeContent"],
+        ```
+
+        Declarative Content is the permission needed to activate the button and actually allow it to do something in the browser.
+
+        This gives our extension permission to access the current tab that you're working in, edit it, manage it, even close it. We use this so we voluntarily limit what our script can do by hiding the rest of the open tabs from it. This is useful so we keep our script simple, but also so we avoid giving people who use our extension the impression that we're after more of their browser data than we really are.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Asking for permission (team up!)
+
+        Every Chrome extension ever made requires permission to operate. It's just a question of what they want to do and what they need permission from the user to do.
+
+        Take **10 minutes** with your neighbour to look at some examples of manifest.json files in other Chrome extensions and see what kinds of permissions they're looking for.
+
+        <a href="https://github.com/panicsteve/cloud-to-butt/blob/master/Source/manifest.json">Cloud To Butt</a>
+
+        <a href="https://github.com/alexadam/save-as-ebook/blob/master/web-extension/manifest.json">Save as eBook</a>
+
+        <a href="https://github.com/google/tamperchrome/blob/master/extension/manifest.json">Tamper Chrome</a>
+
+        <a href="https://github.com/th3crack3n/giphy-extension/blob/master/manifest.json">Giphy</a>
+
+        What do you think those permissions are for? (Hint: There's a breakdown <a href="https://developer.chrome.com/extensions/declare_permissions">here</a>.)
+
+
+
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Next: A script!
+
+        A script is the list of commands that will run in your browser when you click the button. The manifest can point to them so everything ties together very cleanly.
+
+        Referencing a script file looks something like this:
+
+        ```javascript
+        "background": {
+          "scripts": ["script.js"],
+          "persistent": false
+        }
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Checking in
+
+        Overall, your whole manifest file should look like this.
+
+        ```javascript
+        {
+          "name": "My first beautiful extension",
+          "version": "1.0",
+          "description": "First project to build a fresh chrome extension",
+          "manifest_version": 2,
+          "permissions": ["activeTab", "declarativeContent"],
+          "icons": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          },
+          "page_action": {
+            "default_icon": {
+              "16": "images/get_started16.png",
+              "32": "images/get_started32.png",
+              "48": "images/get_started48.png",
+              "128": "images/get_started128.png"
+            }
+          },
+          "background": {
+            "scripts": ["script.js"],
+            "persistent": false
+          }
+        }
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide nested-list" data-markdown>
+      <script type="text/template">
+        #The script
+
+        We added a reference to something called script.js in our manifest file.
+
+        We already have the first bit of that file saved in your learner files. It has one function at the top of it that activates your extension button in Chrome.  This just allows you to click on it.
+
+        But what happens when you click on it?
+
+        (Disclaimer: This will get complicated quickly, but just bear with us - we'll be back to the fun stuff soon.)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Make your button do something
+
+        This is the big part: making your script listen to your button.
+
+        **In your script.js file**, underneath the existing function that's already there:
+
+        ```javascript
+        chrome.pageAction.onClicked.addListener()
+        ```
+
+        This is a bit of a mouthful so let's look at it:
+
+        - chrome is the browser<!-- .element: class="delayed" -->
+        - pageAction is the button \(Remember the pageAction part of our manifest? It's looking there\)<!-- .element: class="delayed" -->
+        - onClicked is the wait. Don't run the script right away. Wait until we click on the button<!-- .element: class="delayed" -->
+        - addListener is the command. When we click, do this:<!-- .element: class="delayed" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Make your button do something
+
+        It's verbose, that's for sure. Here's the next part:
+
+        ```javascript
+        function() {}
+        ```
+        A function is essentially a command, or series of commands, to run on demand. This part sits in between the parentheses for the previous part. It's what will be triggered as soon as you press the button.
+
+        Together, they look like this:
+
+        ```javascript
+        chrome.pageAction.onClicked.addListener( function() {} );
+        ```
+
+        The portion in between the curly braces  {}  is where we focus our attention now.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Adding functionality to your script
+
+        This is the part where we use the "active tab" permission we put in our manifest earlier.
+
+        ```javascript
+        chrome.tabs.query(
+          {active: true, currentWindow: true},
+          function(tabs) { }
+        )
+        ```
+
+        Chrome first goes to the active window you have open right now, then the active tab you have open right now.
+
+        Once it finds that active tab, it can run some code in it. That's another function.
+
+        We call these "nested functions" because they sit inside of each other and rely on each other. But they sure make for some confusing reading. <!-- .element: class="delayed" -->
+
+        All together, your script file should look like this: <!-- .element: class="delayed" -->
+
+        ```javascript
+        chrome.pageAction.onClicked.addListener(function() {
+          chrome.tabs.query(
+            {active: true, currentWindow: true},
+            function(tabs) { }
+          )
+        });
+        ```
+        <!-- .element: class="delayed" -->
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Adding functionality to your script
+
+        Now we go another layer deeper into the matrix.
+
+        Take a deep breath.
+
+        Here we go.
+
+        Inside our latest set of curly braces ( {} ) add this little bit:
+
+        ```javascript
+        chrome.tabs.executeScript(
+          tabs[0].id,
+          {code: 'document.body.style.backgroundColor = "green";'}
+        );
+        ```
+
+        PAUSE! Any guesses on what this means?
+
+        Breaking it down: <!-- .element: class="delayed" -->
+
+        * chrome is the browser <!-- .element: class="delayed" -->
+        * tabs is the active tab that we isolated in the previous step <!-- .element: class="delayed" -->
+        * code is what you're going to execute inside of that tab <!-- .element: class="delayed" -->
+        * document.body... is JavaScript and that's what you are sending into the tab to run on the page <!-- .element: class="delayed" -->
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #You can also leave comments for yourself
+
+        If you want to leave little notes for yourself in your code, you can always do so with a // before your note.
+
+        The // is called "commenting" because it tells the computer to ignore that line of text. It's just a note to yourself.
+
+        Comments end up looking something like this:
+
+        ```javascript
+        // This is just a comment
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Checking in
+
+        Overall, your whole script.js file should look like this.
+
+        ```javascript
+        chrome.declarativeContent.onPageChanged.removeRules(
+          undefined,
+          function() {
+            chrome.declarativeContent.onPageChanged.addRules([{
+              conditions: [new chrome.declarativeContent.PageStateMatcher({pageUrl: {schemes: ['https', 'http', 'localhost', 'chrome']},})],
+              actions: [new chrome.declarativeContent.ShowPageAction()]
+            }]);
+          }
+        );
+
+        chrome.pageAction.onClicked.addListener(function() {
+          chrome.tabs.query(
+            {active: true, currentWindow: true},
+            function(tabs) {
+              chrome.tabs.executeScript(
+              tabs[0].id,
+              {code: 'document.body.style.backgroundColor = "green";'}
+            );
+          });
+        });
+        ```
+
+      </script>
+    </section>
+
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #That's right
+
+        ![Deputy Chief Hardy from the movie 22 Jump Street looking very unimpressed.](framework/img/workshop/unimpressed.gif)
+
+        All of those steps until now have allowed us to run one line of JavaScript on the page loaded into our tab:
+
+        ```javascript
+        document.body.style.backgroundColor = "green";
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Give it a shot with your neighbour
+
+        Load up a variety of pages. Tap the button you made. Watch the background colour of those pages change before your eyes.
+
+        Note how different web pages behave differently under the power of your extension. Try a news site, a Twitter profile, Google.
+
+        ----
+
+        ##Note
+
+        If you're offline, or the internet is slow where you are, you can load the "index.html" files in both the offline1 and offline2 folders into Chrome. The extension will also work with those pages.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Unlimited cosmic power
+
+        But this is just one way to edit these pages.
+
+        Now that you have the button set up, you can tell it to edit these pages in any way you see fit.
+
+        You have all of the power.
+
+        ![A cartoon character dressed in all black with orange goggles furiously typing on a laptop.](framework/img/workshop/hack.gif)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #The simple life
+
+        With a lot of code, we end up doing a lot of setup work to make our actual construction work a lot easier. This is one of those situations.
+
+        Up until now we've been setting up our extension to:
+
+        * exist in our extensions with our own title and description<!-- .element: class="delayed" -->
+        * have permission to identify and manage our tabs<!-- .element: class="delayed" -->
+        * have a button with our logo of choice on it<!-- .element: class="delayed" -->
+        * run a script file of our choosing when someone clicks that button   <!-- .element: class="delayed" -->
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #The ethical life
+
+        This raises some necessary ethical questions:
+
+        * When you have the power to run scripts on other people's computers, what responsibilities do you have toward those people? <!-- .element: class="delayed" -->
+        * When people give you power to manage their tabs, what are they trusting you to do? <!-- .element: class="delayed" -->
+        * When you have access to someone's browser, what data is it OK to collect, and what data should you leave behind? <!-- .element: class="delayed" -->
+        * People are allowing us into their lives and we have a responsibility to not make their lives worse. <!-- .element: class="delayed" -->
+
+        Writing code is a space with a lot of really interesting ethical questions. It's very important to keep them top of mind when coming up with projects you want to work on. <!-- .element: class="delayed" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Some background
+
+        If we're going to spend our afternoon editing web pages, we should understand a bit of what web pages are built with.
+
+        HTML.
+
+        It all comes back to HTML.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Some background
+
+        There are three main languages of the Internet (aside from cats):
+
+        * HTML: this is the raw content of a web page. It's the text, the photos, the links.
+        * CSS: this is how everything looks. It's the style, the appearance, the design.
+        * JavaScript: this is the personality of the web page, how it behaves, how it responds to user inputs.
+
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #The basic idea of HTML
+
+        HTML is written in tags.
+
+        Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to *wrap* the content.  Note the closing tag has a forward slash (`/`).
+
+        ```
+        <tag> opening tag --- closing tag </tag>
+        ```
+
+        HTML *tags* describe the content inside of them to the web browser.
+        ```
+        <h1>This tag describes a heading</h1>
+        <p>This tag is for paragraphs.</p>
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Nested tags
+
+        Tags can be *nested* within other tags like this:
+
+        ```
+        <outertag>
+          outer content
+          <innertag>inner content</innertag>
+          outer content
+        </outertag>
+        ```
+
+        Nested tags create a family tree-like relationship, often referred to as *parent* and *child* nodes.
+
+        The inner tag is the child of the outer tag.
+
+        ```
+        <parent>
+          <child></child>
+        </parent>
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Attributes
+
+        * provides additional information or instruction for the element
+        * included *inside the opening HTML tag*
+        * follows the syntax of `attribute="value"` (note the quotes)
+        * many different attributes
+
+        ```
+        <tag attribute="value">content</tag>
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Attributes in images
+
+        Images, the focus of our work today, have one really really important attribute.
+
+        The `src` attribute is used to identify which image we're loading into the page.
+
+        ```
+        <img src="images/picture.jpg" alt="Picture description">
+        ```
+
+        In addition to the `src` attribute, the `alt` attribute is also required in order to help describe the image for people using assistive technology, such as a screen reader.
+
+        An ```img``` tag by itself doesn't do much until you tell it what image file to load. Once it knows what image you want to use, though, then it becomes powerful.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #So what's next?
+
+        Back to our extension, sitting inside our very lovely script.js file:
+
+        We want to have even more fun with our extension. But that's going to be hard if we have to write every single line of code inside quotation marks like that.
+
+        Let's do better.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Read from a file
+
+        In your script file, instead of this line:
+
+        ```javascript
+        code: 'document.body.style....'
+        ```
+
+        Try something like this:
+
+        ```javascript
+        file: 'main.js'
+        ```
+
+        That's right: Instead of writing code awkwardly in that spot buried down deep inside functions, you can just tell it to run everything that is inside a separate file.
+
+        Let's do that.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Build your new file
+
+        Make a new file and call it main.js.
+
+        Inside that file, you can just write the same line we had before.
+
+        ```javascript
+        document.body.style.backgroundColor = "green";
+        ```
+
+        If you save everything and hit refresh on your extension, it will do the exact same thing as before. But now it's a lot easier to work with.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #All three files
+
+        We have three files now: manifest.json, script.js and main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
+
+        manifest.json → script.js → main.js
+
+        The manifest tells the browser to listen to what script.js tells it to do.
+
+        script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
+
+        main.js tells the current page you're on to turn green.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #The fun life
+
+        One of the fun things you can do with a page is change it. Make your mark on it.
+
+        From here onward, we are abandoning the manifest file. We are also abandoning the script file. Instead we are focusing all of our attention on the main.js file. That is where all the fun is to be had.
+
+        Instead of changing the background colour, let's do something a little more dramatic.
+
+        ```javascript
+        document.body.style = "transition: 5s; transform: rotate(5deg);";
+        ```
+
+        Then refresh your extension and give it a shot.
+
+        Change the transition time, change the rotation angle. See what happens when you experiment.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Remember
+
+        Through all of this: Spaces in your code don't matter. We tend to add more than we need because it makes code easier to read. But if you prefer to keep your text tighter, you can eliminate spaces without running into any troubles at all.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercise in pairs (10 minutes)
+
+        ![Two corgis walking side-by-side on a moving treadmill. One has a floppy ear.](framework/img/workshop/corgis.gif)
+
+        Pair up and take some time to figure out what else you can change this page using some of these other style rules:
+
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font sizes</a>?
+
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">colours</a>?
+
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">rotations and angles</a>?
+
+        ----
+
+        ##Hint
+
+        The style properties you're looking for are "font-size" and "color" and "background-color" and "transform," but that last one is trickier than the others.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #This all uses JavaScript
+
+        The code we've been writing in all of the files with .js at the end is called JavaScript. It's the main programming language of the internet that gives it a sense of motion and interactivity.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # What is JavaScript?
+
+        * controls the *behaviour* of HTML documents
+        * used to animate, hide or show items
+        * react to user input
+        * process data and more!
+
+        Here's what JavaScript looks like:
+
+        ```javascript
+        var myVariable = "Hello World";
+        function sayHello(){
+          alert(myVariable);
+        }
+        sayHello();
+        ```
+      </script>
+    </section>
+
+    <section class="slide highlight" data-markdown>
+      <script type="text/template">
+        # JavaScript is a programming language
+
+        Because JavaScript is a programming language, the structure and syntax include more complexities than HTML or CSS.
+
+        The basic building blocks of programming include features such as *variables*, *functions*, *objects* or control structures such as *if* statements or *loops*.
+
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # JavaScript variables
+
+        Variables are a thing in almost all programming languages ever.
+
+        They are kind of like containers, or a box.
+
+        * used to *store* values
+        * can be used any time, whenever you need them
+        * gives a *name* to a *value*.
+
+        A variable is a named memory location which contains information, to be used at a later time.
+
+        For example, a variable could be used to store a customer's email address.  Then, the variable can be used to send a confirmation email.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Declaring (creating) a variable
+
+        * use the keyword `var`
+        * name the variable anything you want*
+        * end the command with a semi-colon (`;`)
+
+        ```javascript
+        var myVariable = "Hello!";
+        ```
+
+        The value `Hello` is given to the name `myVariable` and is declared using the keyword `var`. This is *assigning* a value to the *variable*.
+
+        Evaluate everything to the right of the equals sign, then assign the value to the variable on the left of the equals sign.
+
+        *See next slide for info about naming conventions <!-- .element: class="note" -->
+      </script>
+    </section>
+
+    <section class="slide nested-list" data-markdown>
+      <script type="text/template">
+        #Variables: Naming conventions
+
+        * Cannot contain spaces:
+          * use camelCase for names with multiple words.
+          * every new word is capitalized
+          * the result looks kind of like `camelHumps`
+        * Cannot contain reserved symbols:
+          * math symbols (+, -, =, etc...)
+          * JavaScript-specific symbols ({, }, :, etc...)
+        * Cannot begin with:
+          * a digit (0 - 9)
+        * JavaScript is case sensitive
+          * so variable names are also case sensitive
+        * Use a descriptive names:
+        `var firstName;` ← Clear that first name will go here.
+        `var fn;`        ← Not as obvious as firstName.
+        `var x; `        ← Not clear at all.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Variable types: Strings
+
+        When storing text values, like words or sentences, the variable type is a *string* value.
+
+        Strings must be contained in quotes.
+
+        ```javascript
+        var greeting = "Hello!";
+        ```
+
+        ```javascript
+        var greeting = "Good morning!";
+        ```
+
+        ```javascript
+        var greeting = "Good evening!";
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Variable types: Strings & concatenation
+
+        You can *add* strings together to join multiple values. This is called **concatenation**.
+
+        ```javascript
+        var greeting = "Good";
+        var greetingTime = "morning";
+        var greetingFull = greeting + " " + greetingTime + "!";
+        ```
+
+        The JavaScript above **concatenates** the three items together like so:
+
+        * greeting + " " + greetingTime + "!";
+        * Good + space + morning + exclamation mark
+        * Good morning!
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Back to our extension
+
+        Coming back to our browser extension: We can use these tools that JavaScript offers us to look at any page and manipulate it.
+
+        At the top of your main.js script, try something like this:
+
+        ```javascript
+        var allImages = document.getElementsByTagName('img');
+        ```
+
+        This creates a variable that stores a list of every image on the page, which we can take a look at individually in something called the Console.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # The Console
+
+        * interactive browser tool
+        * enter commands and interact directly with a web page
+        * can also log diagnostic information and check for errors
+
+        The Console in Chrome looks like this:
+        ![The Console](framework/img/workshop/the_console_x.jpg)
+
+        **Important!** The blue `>` symbol represents a space to enter your input but you don't have to actually type the symbol.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Accessing the Console
+
+        You can open the Console when viewing _any_ HTML page. In Chrome, there are different ways to open the Console tab.
+
+        Keyboard shortcut:
+        `COMMAND + OPTION + J` (MAC)  / `CONTROL + SHIFT + J` (WINDOWS)
+
+        OR
+
+        Select: `View > Developer > JavaScript Console`.
+
+        Open the Console in this slide presentation. Take a moment to practice opening and closing the Console until you’re comfortable with it.
+
+        ---
+
+        ###Pro tip!
+        The Console also shows any errors on the page so if you open the Console on any existing web page, you *may* see some error messages.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Using the Console
+
+        In our main.js file, we can write new images to the Console so we can see what they do and where they are.
+
+        ```javascript
+        var allImages = document.getElementsByTagName('img');
+        console.log(allImages);
+        ```
+
+        Now refresh and run your extension: You'll see something new being injected into the Console. It's a list of every image on the page. Hover your mouse over each of them and it will even show you which image on the page that one is.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # And then....
+
+        JavaScript uses a lot of periods. Lines like ```document.getElementsByTagName``` and ```console.log``` have periods in them that can look weird.
+
+        It's sometimes useful to think of the periods shouting "and then what?" because that's essentially what they're doing.
+
+        (Go to the ) document.
+
+        And then what?
+
+        Get Elements By Tag Name
+
+        And then what?
+
+        Go to the Console.
+
+        And then what?
+
+        Log them.
+
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercise (5 minutes)
+
+        Spend some time familiarizing yourself with the Console and how to collect elements from your page. Can you collect h1 tags? Images? Paragraphs?
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        # Kittens and puppies and bears, oh my!
+
+        The images that exist on any given web page are good. But certainly we can make them cuter, right?
+
+        Pick your favourite animal to substitute into this page:
+
+        <a href="https://placekitten.com/">Kittens</a>?
+
+        <a href="https://placedog.net/">Puppies</a>?
+
+        <a href="https://placebear.com/">Bears</a>?
+
+        <a href="http://fillmurray.com">Bill Murray</a>?
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Images
+
+        Images are so much fun. In the wild world of HTML, images look like this:
+
+        ```
+        <img src="http://placekitten.com/100/100" alt="">
+        ```
+
+        Unlike a lot of tags, ```img``` tags don't have a closing ```</img>``` at their close.
+
+        That little `src=` is the source attribute, linking the image tag to the actual image file.
+
+        We now have the power to change that link as we see fit.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Ch-ch-changes!
+
+        There is a feature in JavaScript that allows you to change the attribute of an HTML element on the page.
+
+        Conveniently enough, it's called setAttribute. Here's an example:
+
+        ```javascript
+        image.setAttribute('src', 'http://placekitten.com/200/300')
+        ```
+
+        There's only one problem: we have a lot of images on the page. Which image do we want to change?
+
+        How about ... all of them?
+
+        ----
+
+        ##Note
+
+        If you're offline, or the internet is slow where you are, you can use some images already downloaded for your use in the offlineImages folder. To get the URL for those images, just drag them into an empty tab in Chrome and use those URLs instead of the placekitten.com link.
+
+        That link will look something like this:
+
+        ```
+        file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/300.jpg
+        ```
+
+        It's not pretty, but it will work.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Loops
+
+        Humans are really bad at repetitive tasks. Repetitive tasks are also really boring.
+
+        Computers are good at boring repetitive things! We call them loops.
+
+        Essentially, we can take a whole list of things (like a list of images, for example...) and then run the same bit of code on each item.
+
+        Loops become very powerful very quickly.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Loops!
+
+        What it means for us right now: We can loop through all of the images on the page and change each of them to be the image we want.
+
+        That loop looks a bit like this:
+        ```javascript
+        var allImages = document.getElementsByTagName('img');
+        console.log(allImages);
+        for (var i = 0; i < allImages.length; i++) {
+          console.log(allImages[i]);
+        }
+        ```
+
+        Let's break that down:
+
+        * allImages is a variable that contains a list of all the images on the page.
+        * i is a variable that tracks which of the images in the list we're currently working with. It's a number that walks up the list of images with us, starting at 0.
+        * So i starts at 0, goes until it's reached the length of all the images, increasing by one every time.
+        * At each image, it console.logs that image.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Loops IRL!
+
+        Stand up - let's do this IRL.
+
+        We need a volunteer to stand at the front. They will be the counter.
+
+        The rest of you will be the elements we're looping over. (Either one at a time, or by each row/table group) <!-- .element: class="delayed" -->
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Loops IRL!
+
+        Counter: You're keeping track of whose turn it is to dance.
+
+        Everyone: Wait your turn. When the counter points to your group/table, follow the instructions below.
+
+        This is basically the code we're running on ourselves:
+
+        ```javascript
+        var participants = allOfYouHereToday;
+
+        for (var i = 0; i < participants.length; i++) {
+            participants[i].naeNae;
+            participants[i].jazzHands;
+            participants[i].vogue;
+        }
+        ```
+
+        ...aaaand GO! <!-- .element: class="delayed" -->
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Loops IRL!
+
+        See what happened? The counter allowed the functions to reach everyone in the room, but the functions ran exactly the same commands on every person. We looped over them!
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Loops!
+
+        In code, loops are difficult to read. There's a lot of punctuation in them and a lot of curly braces and a they're weird looking. No worries.
+
+        Whenever you see:
+
+        ```javascript
+        allImages[i]
+        ```
+
+        That just means this is one of the images on the page, the image we currently care about, the image that we are about to change, the image our counter has currently selected.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # A couple of small details about loops!
+
+        1. There's a shortcut. If you start typing 'for' in your Atom editor, then hit the "tab" key, it will automatically expand a loop for you. Nifty!
+
+        2. There are cases where you might have more than one loop in your script. In that case, it makes sense to not use the same counter variable for both of them, because they could get confused with each other.
+
+          In our example, we're using `i` as the counter variable name. You can use any variable name you like, but using the same variable for two different purposes is usually a bad idea.
+
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Replacing the images
+
+        Now that we have the `allImages[i]` variable that represents the image we want to change, we can add a line of JavaScript in our loop that looks like this:
+
+        ```javascript
+        allImages[i].setAttribute('src', 'http://placekitten.com/200/300');
+        ```
+
+        That will take the `src` attribute of the image and replace whatever is currently there with a placekitten link.
+
+        Go ahead. Give it a try. Load up any page and place some kittens (or puppies or bears or Bill Murray).
+
+        ----
+
+        ##Note
+
+        If you're offline, or the internet is slow where you are, this is where you would use the link that references the local image on your personal machine that looks a little something like this:
+
+        ```
+        file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/300.jpg
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Different images here and there
+
+        The placeholder image links have a /200/300 in them. Those are the width and height of the image they're going to put in place.
+
+        So instead of using the same 200x300 image for every image on our page, we can use the appropriately sized image each time.
+
+        To do this, we need to detect how big the original image in that spot was.
+
+        ```javascript
+        var imageHeight = allImages[i].clientHeight;
+        var imageWidth = allImages[i].clientWidth;
+        ```
+        Those two lines create two new variables, and use the `clientHeight` and `clientWidth` attributes to store how big the original images are.
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Different images here and there
+
+        Then we can string together those new height and width values into the placeholder image link to tie it all together.
+
+        ```javascript
+        allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Different images here and there
+
+        Altogether now, this is how that loop ought to look (approximately):
+
+        ```javascript
+        var allImages = document.getElementsByTagName('img');
+
+        for (var i = 0; i < allImages.length; i++) {
+          var imageHeight = allImages[i].clientHeight;
+          var imageWidth = allImages[i].clientWidth;
+          allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
+        }
+        ```
+
+        ----
+
+        ##Note
+
+        If you're using the offline mode, you can't use the `width` and `height` attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
+
+        The first variable, `baseLink`, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
+
+        ```javascript
+        var baseLink = "file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/";
+        var imagesToPick = ['100.jpg', '200.jpg', '300.jpg', '400.jpg', '500.jpg'];
+        var photoToInsert = imagesToPick[Math.floor(Math.random() * imagesToPick.length)];
+        allImages[i].setAttribute('src', baseLink + photoToInsert);
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Add some more fun
+
+        If you want some extra fun, you can still spin the page when people click the button, giving the whole thing a fun transition effect.
+
+        ```javascript
+        document.body.style = "transition: 2s; transform: rotate(1080deg);";
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #Stretch goals
+
+        Whoa! You either finished early or you're back for more
+
+        (Or <a href="#slide100">Skip ahead</a> to wrap up)
+
+        ![The Incredibles posing for battle.](framework/img/workshop/stretch.gif)
+
+        Let's do this
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Streeeeeeeetch
+
+        Applying your transitions to the entire page at once is pretty fun. But it's more fun to control which images get your magic touch.
+
+        Let's make that our next feature.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Event listeners
+
+        Events are very common in web development. Events are how a web browser interprets what happens when someone clicks their mouse, or scrolls down the page, or finishes loading a page, or hovers over an image on a page. There are literally hundreds of events firing from your web browser every second.
+
+        Event *listeners* are small pieces of code that pay attention to those events.
+
+        Event listeners can be very powerful.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Event listeners
+
+        Event listeners are generally attached to elements that are already on your page. That way you can say "hey, image, when someone clicks on you, this is how you should behave." In that case, we attach an event listener to that image.
+
+        Luckily for us, our previous work on this extension has already allowed us to gather images. We have a line that reads:
+
+        ```javascript
+        var allImages = document.getElementsByTagName('img');
+        ```
+
+        Then we have another line inside our loop over images that reads:
+
+        ```javascript
+        var thisImageHeight = allImages[i].clientHeight;
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Event listeners
+
+        Remember that ```allImages[i]``` means this particular image in our loop.
+
+        So instead of updating it immediately with our new picture, we can tell it to wait until someone clicks on it.
+
+        ```javascript
+        allImages[i].addEventListener('click', function() {
+          console.log(this);
+        });
+        ```
+
+        Let's go over each part:
+
+        - ```allImages[i]``` is the particular image on the page.
+        - ```addEventListener``` is telling that image to pay attention to an event
+        - ```'click'``` tells it what event to pay attention to. It's going to wait for someone to click on it.
+        - ```function() {}``` is what happens when someone does click on it. The code to execute when someone clicks on that image goes in between the curly braces.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Wait - what's THIS
+
+        ```javascript
+        console.log(this);
+        ```
+
+        That's weird.
+
+        The word ```this``` just refers to the item you just clicked on. What did you just click on? This. I just clicked on this: I'm going to console.log() it.
+
+        It's weird to just have one word "this" but it's actually a very powerful tool in our tool box.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Event listeners
+
+        The code right now should look like this:
+
+        ```javascript
+        for (var i = 0; i < allImages.length; i++) {
+          allImages[i].addEventListener('click', function() {
+            console.log(this);
+          })
+        }
+        ```
+
+        Since we have ```this``` we can also act on it just as we did with our previous exercise.
+
+        ```javascript
+        var thisImageHeight = this.clientHeight;
+        var thisImageWidth = this.clientWidth;
+        var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
+        this.setAttribute('src', imageLink);
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Stretch goal the first
+
+        All together now, your click-to-replace-image code will be:
+
+        ```javascript
+        for (var i = 0; i < allImages.length; i++) {
+          allImages[i].addEventListener('click', function() {
+            var thisImageHeight = this.clientHeight;
+            var thisImageWidth = this.clientWidth;
+            var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
+            this.setAttribute('src', imageLink);
+          });
+        }
+        ```
+
+        MAGIC!
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #Stretch 2: The incredible disappearing element
+
+        ![Violet from the Incredibles touches her uniform and it disappears. She looks shocked.](framework/img/workshop/drop.gif)
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Return of the stretch
+
+        Now that we know how to act on individual elements on the page, we can have a little bit of fun with ```this``` in other ways, too.
+
+        Like, we can make them disappear.
+
+        Take five minutes and see if you can come up with the two different ways we could remove an element from the page.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Stretch to the solution
+
+        First up, we have to select every text element or image element on the page.
+
+        ```javascript
+        var myElementsToDisappear = document.getElementsByTagName('img');
+        ```
+
+        Note: You could use ```p``` tags or any other kind of tag in this exercise. The world is your oyster.
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Stretch to the solution
+
+        Loop through them and add your click event listener to them, same as before.
+
+        ```javascript
+        for (var i = 0; i < myElementsToDisappear.length; i++) {
+          myElementsToDisappear[i].addEventListener('click', function() {
+
+          });
+        }
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Stretch to the solution
+
+        From here there are a couple of different ways you can proceed.
+
+        (One of the fun parts about working in code is there are always many different ways to solve a problem: The correct solution is the one that makes sense to you.)
+
+        You can either hide the element from view, or you can delete it entirely from the page.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Hiding from view
+
+        Hiding something from view is a style question. We're making something invisible. Again, there are two ways to approach this task:
+
+        - Changing its opacity.
+        - Changing if it's rendered.
+
+        Option 1:
+        ```javascript
+        this.setAttribute('style', 'opacity: 0')
+        ```
+
+        Option 2:
+        ```javascript
+        this.setAttribute('style', 'visibility: hidden')
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Removing it entirely
+
+        Removing an element from the page entirely is a permanent move. Hiding it from view? That can be undone. Deleting it? Not so much.
+
+        Removing it from view is also a much simpler proposal:
+
+        ```javascript
+        this.remove()
+        ```
+
+        Boom. Done. Gone.
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #Good stretch, everyone!
+
+        ![A black cat on a light carpet rolls over slightly and then does a great big stretch.](framework/img/workshop/big_stretch.gif)
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Show and tell
+
+        Who wants to show off their own slice of creativity they added to this extension?
+
+        ![SpongeBob moves his hands apart above his head in an arc and a rainbow appears between his hands.](framework/img/workshop/sponge.gif)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Today...
+
+        We learned a whole pile of things:
+
+        * the basics of how to install and trigger browser extensions
+        * what JavaScript looks like and how to customize it
+        * HTML attributes
+        * placeholder images!
+        * some of the ethics around running your code on other people's computers
+
+        <p>We can also use what we've learned today to create something fun, like this: <a href="http://nthitz.github.io/turndownforwhatjs/">Turn Down For What</a>, or something helpful, like this: <a href="https://chrome.google.com/webstore/detail/zoom-text-only/jamhfhbppcmkgghlkeieococonlbppjg">Zoom Text Only</a></p><!-- .element: class="delayed" -->
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # You did it!
+
+        ![Anna from the movie Frozen squealing with excitement.](framework/img/workshop/done.gif)
+      </script>
+    </section>
+
+
+    <section class="slide" data-toc>
+      <h1>Extra resources</h1>
+
+      <p>To keep you going, here are some extra links that you may find useful.</p>
+
+      <ul>
+        <li>
+          <a href="https://developer.chrome.com/webstore/publish">Publishing your extension in the Chrome web store</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Making
+            it Firefox compatible (hint: It already is)</a>
+        </li>
+        <li>
+          <a href="https://developer.chrome.com/extensions/getstarted">One step more complicated: Chrome Extensions
+            that include their own user interface</a>
+        </li>
+        <li>
+          <a href="https://www.tomsguide.com/us/pictures-story/283-best-google-chrome-extensions.html">Inspiration:
+            some of the best Chrome extensions of 2018</a>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- Last slide -->
+    <section class="slide last">
+      <h1>Thank you!</h1>
+      <h2 class="heading-bg">
+        <span>Building browser extensions<br></span>
+      </h2>
+
+      <img class="instructor" src="https://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <h2><span class="cursive">with</span> Instructor Name</h2>
+      <ul>
+        <li><a href="mailto:">hello@email.com</a></li>
+        <li><a href="#">mywebsite.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
+
+      <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a>
+        based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+    </section>
+
+  </main><!-- cls main section -->
+
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for (var i = 0; i < snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+
+</html>
