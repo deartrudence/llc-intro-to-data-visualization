@@ -27,16 +27,16 @@
     <section class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
-        <span>Browser extensions:<br>
-          Hack the planet!</span>
+        <span>Intro to Data Visualization with D3.js</span>
       </h1>
 
       <!-- FILL IN INSTRUCTOR DETAILS -->
-      <img class="instructor" src="https://placehold.it/225x225" alt="Instructor Name">
-      <h2><span class="cursive">with</span> Instructor name</h2>
+      <img class="instructor" src="http://railsgirlsto.com/images/trudy.jpg" alt="Instructor Name">
+      <img class="instructor" src="http://railsgirlsto.com/images/leanne.jpg" alt="Instructor Name">
+      <h2><span class="cursive">with</span> Trudy MacNabb & Leanne Shapton</h2>
       <ul>
-        <li><a href="mailto:">hello@email.com</a></li>
-        <li><a href="http://website.com">website.com</a></li>
+        <li><a href="mailto:">hello@upatfive.ca</a></li>
+        <li><a href="http://upatfive.ca">upatfive.ca</a></li>
         <li><a href="http://twitter.com/">@twitter</a></li>
       </ul>
 
@@ -47,7 +47,7 @@
       <footer>
         <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
             src="framework/img/cc-by-nc.png" /></a>
-        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a
+        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">Trudy MacNabb & Leanne Shapton</a> for <a
             prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName"
             rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span>
@@ -124,13 +124,23 @@
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #What is a browser extension?
+        #Why Data visualization?
 
-        Browser extensions are small pieces of code that make your web browsing experience more fun, more useful, more private or more public.
+        In today’s world so much data is being collected that could prove to be useful.  However, large sets of data can often be overwhelming and hard to share meaningful information and insights. Creating visualizations can help distill that information in a more compelling fashion and helps tell a story with the data.  
+        
+        Creating interactive visualizations for the web can make it even more compelling and easily shareable
+      </script>
+    </section>
 
-        ![Various browser extension icons.](framework/img/workshop/extensionExamples.png)
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #What is D3?
 
-        They usually show themselves as buttons in the top bar of your web browser and allow some extra functionality that doesn't come with your browser by default.
+        D3.js is a library created by <a href="https://bost.ocks.org/mike/" target="_blank">Mike Bostock</a> (<a href="https://twitter.com/mbostock?lang=en" target="_blank">twitter</a>) that assists in the creation of datavisulations for the web.
+
+        This library takes care of the calculations such as scaling and arching, as well as DOM manipulation and transitions
+
+        D3.js creates SVGs that when combined with HTML &CSS produce responsive websites for sharing complex information.  D3 also uses data-driven transformations and transitions to showcase changes to the data.
       </script>
     </section>
 
@@ -144,44 +154,19 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #What is a browser extension?
+        #D3 Examples
 
-        They are programs that live in your browser, but can accomplish almost anything at all.
+        * <a href="https://pudding.cool/">pudding.cool</a>
+        * <a href="https://www.informationisbeautifulawards.com/news/118-the-nyt-s-best-data-visualizations-of-the-year">New York Times</a>
 
-        ##Tools
-
-        * <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en-US">Ad blocker</a>
-        * <a href="https://chrome.google.com/webstore/detail/countdown/fefdcjabloofphhfcinhfbinmehfcojm?hl=en-US">Timers</a>
-        * <a href="https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk?hl=en-US">Password Managers</a>
-        * <a href="https://chrome.google.com/webstore/detail/facebook-blocker/pjaajgndmkdhodnaeeflmchheijfjnhf?hl=en-US">Facebook Blocker</a>
-
-        ##Fun
-
-        * <a href="https://chrome.google.com/webstore/detail/giphy-for-chrome/jlleokkdhkflpmghiioglgmnminbekdi?hl=en-US">Giphy</a>
-        * <a href="https://chrome.google.com/webstore/detail/bubble-shooter-html5/pfaogkfljpdfmodbmbogiiblppijleen?hl=en-US">Games</a>
-        * <a href="https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=en-US">Equalizers</a>
+      
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Today
-
-        Today we're going to build something in the fun category of browser extensions: We're going to look at how web pages are built, then look at how we can change them.
-
-        The internet needs more cats! So we're going to build an extension that will replace every image on the page with kittens (or the animal of your choosing). It should look a little like this: <!-- .element: class="delayed" -->
-
-        ![wolfewylie's Twitter profile, with all images replaced with cat images.](framework/img/workshop/sample_page.png)<!-- .element: class="delayed" -->
-
-      </script>
-    </section>
-
-    <section class="slide centered" data-markdown data-toc>
-      <script type="text/template">
-        #Get Chrome ready
-
-        We'll be working in Chrome today. So to get started, we need to get Chrome to treat us like the software developers we are.
+        #SVGs (Scalable Vector Graphics)
 
         ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](framework/img/workshop/got_this.gif)
       </script>
@@ -189,117 +174,142 @@
 
     <section class="slide centered" data-markdown data-toc>
       <script type="text/template">
-        #Get into the extensions manager
+        #What is an SVG?
 
-        ![Click 'Customize and and Control Google Chrome' (three dots in the top left of the browser window). Go to 'More Tools', and then click on 'Extensions'.](framework/img/workshop/chrome_extension_location.png)
-      </script>
-    </section>
+        Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation.
 
-    <section class="slide centered" data-markdown>
-      <script type="text/template">
-        # Enable developer mode
+        It is essentially an image written in code that can also be manipulated by code.
 
-        ![](framework/img/workshop/chrome_developer_mode.png)
+        It scales without any loss of image quality and because it is code it can be created by a program.
+
       </script>
     </section>
 
     <section class="slide centered" data-markdown data-toc>
       <script type="text/template">
-        #Load it up!
+        #Example SVG
 
-        Click on "load unpacked" to get started.
+        Note that the tags are very similar to HTML  ```<svg></svg>```
 
-        ![](framework/img/workshop/chrome_load_unpacked.png)
+        An svg’s outside tag will be ```<svg></svg>```  and will contain attributes with data about the version as well as size and position. (x y viewbox).
+
+        Next we have the ```<path>``` tag.  These describe the lines and shapes that are part of the svg.  These contain attributes about styling such as fill and stroke.
+
+        They also contain the actual shape/line in the d attribute.
+
+        The `<g>`tag is used to group paths together and usually doesn’t have it’s own attributes.
+
+    
+       `<svg xmlns="http://www.w3.org/2000/svg"  version="1.1" x="0px" y="100px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100"><path fill="pink" stroke="pink" strokeWidth="3" strokeMiterlimit="10" d="M43.484,35.727c0,0-0.245-7.84-0.021-15.071  c0.084-2.731-0.239-5.305,0.636-6.764C45.833,11,52.22,4.27,54.325,6.437c0.467,0.48,1.455,3.84,1.857,9.714  c0.49,7.208,0.447,15.467,0.447,19.576" /><path fill="#000000" d="M59.676,58.062H40.489V34.997h19.187V58.062z M58.375,36.496H41.846v20.835h16.529V36.496z" /><g><path fill="#000000" d="M62.139,90.66c0,2.201-1.799,4-4,4H42.026c-2.2,0-4-1.799-4-4V61.52c0-2.2,1.8-4,4-4h16.113   c2.201,0,4,1.8,4,4V90.66z M60.76,62.586c0-2.199-1.801-4-4-4H43.334c-2.2,0-4,1.801-4,4v27.059c0,2.199,1.8,4,4,4H56.76   c2.199,0,4-1.801,4-4V62.586z" /></g></svg>`
+ 
+       
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Rendering an SVG
+
+        The previous code results in the following image.  It can be displayed in Chrome browser like an HTML file if you want to see what it looks like.
+
+        As the name would imply, it is scalable, which means it will remain the same sharpness no matter how big it gets.  Also, because it’s code, it remains minimal in size (a few kbs - which is ideal for fast web pages)
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #SVGs and D3
+
+        What D3 does is it takes in our data and performs some mathematical calculations on that data and then creates SVGs in the forms of graphs that are then appended to the DOM.
+
+        The DOM is the Document Object Model, and all it really means is the HTML page.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #The folder is the trick
+        #Programming Fundamentals
 
-        Note that when you add an unpacked extension to your Chrome, you have to select the WHOLE folder, not just a file inside of it.
+        HTML + CSS + JAVASCRIPT = BASIC WEB PAGE
 
-        When you add a new unpacked extension, Chrome looks for the manifest file to see what's inside and what it should do next.
+        HTML (Hypertext Markup Language) is a markup language used to define the content.
+
+      <p>I'm just a paragraph.</p>
+
+        CSS (Cascading Style Sheets) is a style sheet language used to create the presentation and look of a site.
+
+      <p style=”color: blue;” >I'm a paragraph with style.</p>
+
+        JavaScript is a programming language used to define the behavior and used to add functionality to a website.
+
+      <p onclick=”alert(‘hello world’) ”> I'm a paragraph that can be clicked. Try it!</p>
+
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #What is code, though?
-
-        What we generally call "code" is just a set of instructions that tell a computer what to do. Code is a series of commands, that the computer knows how to execute.
-
-        There are many different languages under the umbrella of "code" but they all follow very similar concepts and are built for particular tasks.
-
-        In our case, we're writing JavaScript, which is the common language of web browsers. When we write programs for the Web, we generally write them in JavaScript.
+        #JavaScript !!
 
       </script>
     </section>
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        #Now to our files
+        #What is JavaScript?
 
-        The basics of a browser extension are pretty straight forward. All we have to kick things off are a folder of images, and a file called manifest.json.
+        * Controls the behavior of HTML documents
+        * Used to animate, hide or show items
+        * React to user input
+        * Process data and more!
 
-        ![The project directory, which contains an images folder and a file called manifest.json. The images folder contains 4 images: get_started16.png, get_started32.png, get_started48.png, and get_started128.png.](framework/img/workshop/first_files.png)
+
+        Here's what JavaScript looks like:
+
+      ```var myVariable = "Hello World";
+      function sayHello(){
+        alert(myVariable);
+      }
+      sayHello();```
+      
       </script>
     </section>
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        # The manifest file
+        #What is Programming?
 
-        The manifest file is going to come up a lot in this workshop. It's the backbone of everything that your extension is and does. The manifest is where you can set the title and description, icons and all of those fancy details. But it's also where you can ask people using your extension for special permissions to control web pages.
+        Because JavaScript is a programming language, the structure and syntax include more complexities than HTML or CSS.
 
-        You have a basic manifest file in your exercises folder already. You can open that and see what's inside now.
+        The basic building blocks of programming include features such as variables, functions, objects or control structures such as if statements or loops.
       </script>
     </section>
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Exercise (5-10 minutes)
+        #The console
 
-        Because Chrome is paying attention to the manifest file first, the manifest file is what we can start playing with first. Spend some time familiarizing yourself with the manifest.
+        Before we get into the nitty-gritty details of these JavaScript principles, let’s take a look at a tool called the console.
 
-        Can you change the name of your extension, change the version number, change the description? Each time you save your file, hit **"refresh"** on the extension in Chrome and see it change right away.
+        We'll be using this tool in the upcoming exercises to focus on getting used to the programming syntax.
 
-
-
-        ---
-        ###Note
-
-        Every time you make a change to your code, you have to hit "refresh" on your extension before you can see the changes
+        This way, we can write programs without relying on HTML & CSS and learn some of the fundamental programming concepts first.
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Changing the icon of your extension
+        #Getting comfortable with the console
 
-        Software has icons. This we know. We double-click on so many icons it's become a default behaviour for all computers everywhere. So browser extensions can also have icons.
+        * interactive browser tool
+        * enter commands and interact directly with a web page
+        * can also log diagnostic information and check for errors
+        
+        The console in Chrome looks like this: 
+        image
 
-        These icons usually mean something: the shield protects us, the keyhole is for passwords ... the kitties bring us joy.
-
-        Let's add one.
-
-        Change your manifest file to include an "icons" parameter.
-
-        ```javascript
-        {
-          "name": "Getting Started Example",
-          "version": "2.0",
-          "description": "First project to build a fresh chrome extension",
-          "manifest_version": 2,
-          "icons": {
-            "16": "images/get_started16.png",
-            "32": "images/get_started32.png",
-            "48": "images/get_started48.png",
-            "128": "images/get_started128.png"
-          }
-        }
-        ```
+        Important! The blue > symbol represents a space to enter your input but you don't have to actually type the symbol.
 
       </script>
     </section>
@@ -317,111 +327,111 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Errors (handling them)
+        #Accessing the console
 
-        Sometimes you'll get an error when you try to refresh your extension. That might look like this:
+        You can open the console when viewing any HTML page. In Chrome, there are different ways to open the Console tab.
 
-        ![Failed to load extension. File: ~/Documents/LLC/clc-intro-to-chrome-extensions/first-extension. Error: Manifest is not valid JSON. Line: 12, column: 4, Trailing comma not allowed.](framework/img/workshop/extension_load_error.png)
+        Keyboard shortcut: 
+        COMMAND + OPTION + J (MAC) 
+        CONTROL + SHIFT + J (WINDOWS)
+        OR
+        Select: View > Developer > JavaScript Console.
 
-        The good news: it's very clear about what's broken, showing you which line number it's on, which column (how many letters in) and in which file. This makes it much easier to go in and fix it. When you're done, click "retry" to give it another shot.
+
       </script>
     </section>
 
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        #And that's it
-
-        You've made a browser extension!
-
-        ![The ending screen from Looney Toons. "That's All Folks".](framework/img/workshop/thatsall.gif)
+        #Variables
 
       </script>
     </section>
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        ![Christina Aquilera from the TV show, the Voice, raising her hands out and saying "Just Kidding!"](framework/img/workshop/kidding.gif)
+        #What is a Variable
 
-        This is what we call a "Hello World" moment: Proof that the basic idea works. Now we can start building on it.
+        Variables are like containers or a box.
+        * used to store values
+        * can be used any time, whenever you need them
+        * gives a name to a value.
 
-        So let's look at next steps: Making it actually do something.
+        A variable is a named memory location which contains information, to be used at a later time.
+
+        For example, a variable could be used to store a customer's email address. Then, the variable can be used to send a confirmation email.
+
+
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Give it a button
+        #Declaring A Variable
 
-        The biggest thing about browser extensions that most people are familiar with is they come with a button.
+        * Use the keyword var
+        * Name the variable anything you want*
+        * End the command with a semi-colon (;)
 
-        Buttons trigger actions.
+      var myVariable = "Hello!";
 
-        But what the button looks like, and what the button triggers, that's all defined in the manifest. It looks a little like this:
+        The value Hello is given to the name myVariable and is declared using the keyword var. This is assigning a value to the variable.
 
-        ```javascript
-        "page_action": {
-          "default_icon": {
-            "16": "images/get_started16.png",
-            "32": "images/get_started32.png",
-            "48": "images/get_started48.png",
-            "128": "images/get_started128.png"
-          }
-        }
-        ```
+        Evaluate everything to the right of the equals sign, then assign thise value to the variable on the left of the equals sign.
+
+        *See next slide for info about naming conventions
+
 
       </script>
     </section>
 
     <section class="slide centered" data-markdown data-toc>
       <script type="text/template">
-        #Press the button
+        #Variable Naming Conventions
 
-        ![Buddy the Elf from the movie Elf pressing all the buttons in an elevator.](framework/img/workshop/pressbutton.gif)
+        Cannot contain spaces:
+        * Use camelCase for names with multiple words.
+        * Every new word is capitalized
+        * The result looks kind of like camelHumps
+        Cannot contain reserved symbols:
+        * math symbols (+, -, =, etc...)
+        * javascript-specific symbols ({, }, :, etc...)
+        Cannot begin with:
+        * a digit (0 - 9)
+        JavaScript is case sensitive
+        * so variable names are also case sensitive
 
-        Buttons are really fun. We should make our button do something.
-      </script>
-    </section>
+        Use a descriptive names: var firstName; ← Clear that first name will go here. 
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # First we need permission
+        var fn; ← Not as obvious as firstName. 
 
-        The internet being what it is, and consent being a proper requirement to run our code in other people's web browsers, permissions are a big part of writing extensions.
-
-        Permissions also live in the manifest file.
-
-        ```javascript
-        "permissions": ["activeTab", "declarativeContent"],
-        ```
-
-        Declarative Content is the permission needed to activate the button and actually allow it to do something in the browser.
-
-        This gives our extension permission to access the current tab that you're working in, edit it, manage it, even close it. We use this so we voluntarily limit what our script can do by hiding the rest of the open tabs from it. This is useful so we keep our script simple, but also so we avoid giving people who use our extension the impression that we're after more of their browser data than we really are.
+        var x; ← Not clear at all.
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Asking for permission (team up!)
+        # Variable Types
 
-        Every Chrome extension ever made requires permission to operate. It's just a question of what they want to do and what they need permission from the user to do.
+      </script>
+    </section>
 
-        Take **10 minutes** with your neighbour to look at some examples of manifest.json files in other Chrome extensions and see what kinds of permissions they're looking for.
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # String
 
-        <a href="https://github.com/panicsteve/cloud-to-butt/blob/master/Source/manifest.json">Cloud To Butt</a>
+        When storing text values, like words or sentences, the variable type is a string value.
 
-        <a href="https://github.com/alexadam/save-as-ebook/blob/master/web-extension/manifest.json">Save as eBook</a>
+        Strings must be contained in quotes.
 
-        <a href="https://github.com/google/tamperchrome/blob/master/extension/manifest.json">Tamper Chrome</a>
+      var greeting = "Hello!";
 
-        <a href="https://github.com/th3crack3n/giphy-extension/blob/master/manifest.json">Giphy</a>
+      var greeting = "Good morning!";
 
-        What do you think those permissions are for? (Hint: There's a breakdown <a href="https://developer.chrome.com/extensions/declare_permissions">here</a>.)
-
-
+      var greeting = "Good evening!";
 
       </script>
     </section>
@@ -429,146 +439,79 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Next: A script!
+        #Strings + Concatenation
 
-        A script is the list of commands that will run in your browser when you click the button. The manifest can point to them so everything ties together very cleanly.
+        You can add strings together to join multiple values. This is called concatenation.
 
-        Referencing a script file looks something like this:
+      var greeting = "Good";
 
-        ```javascript
-        "background": {
-          "scripts": ["script.js"],
-          "persistent": false
-        }
-        ```
+      var greetingTime = "morning";
+
+      var greetingFull = greeting + " " + greetingTime + "!";
+        
+        The JavaScript above concatenates the three items together like so:
+      
+      var greetingFull = greeting + " " + greetingTime + "!";
+      //var greetingFull = Good + space + morning + exclamation mark
+      var greetingFull = Good morning!
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Checking in
+        #Numbers
 
-        Overall, your whole manifest file should look like this.
+          Variable values can also be numbers.
 
-        ```javascript
-        {
-          "name": "My first beautiful extension",
-          "version": "1.0",
-          "description": "First project to build a fresh chrome extension",
-          "manifest_version": 2,
-          "permissions": ["activeTab", "declarativeContent"],
-          "icons": {
-            "16": "images/get_started16.png",
-            "32": "images/get_started32.png",
-            "48": "images/get_started48.png",
-            "128": "images/get_started128.png"
-          },
-          "page_action": {
-            "default_icon": {
-              "16": "images/get_started16.png",
-              "32": "images/get_started32.png",
-              "48": "images/get_started48.png",
-              "128": "images/get_started128.png"
-            }
-          },
-          "background": {
-            "scripts": ["script.js"],
-            "persistent": false
-          }
-        }
-        ```
+      var meaningOfLife = 42;
+
+          JavaScript can also do math.
+          + addition, - subtraction, * multiplication, / division
+        
+      var sum = 5 + 2;
+
+         This will return a value of 7.
 
       </script>
     </section>
 
     <section class="slide nested-list" data-markdown>
       <script type="text/template">
-        #The script
+        #Numbers + Expressions
 
-        We added a reference to something called script.js in our manifest file.
+        These operations work whether the values are numbers, or the values are stored in a variable.
 
-        We already have the first bit of that file saved in your learner files. It has one function at the top of it that activates your extension button in Chrome.  This just allows you to click on it.
+      var startingValue = 5;
+      var multiplier = 2;
 
-        But what happens when you click on it?
-
-        (Disclaimer: This will get complicated quickly, but just bear with us - we'll be back to the fun stuff soon.)
+      var endingValue = startingValue * multiplier;
+       
+        To the right of the ‘=’ startingValue * multiplier; is called an expression.  The variable stores the evaluation of that expression.  In this case 5 * 2 is 10, so the variable endingValue will return a value of 10.
+        
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Make your button do something
-
-        This is the big part: making your script listen to your button.
-
-        **In your script.js file**, underneath the existing function that's already there:
-
-        ```javascript
-        chrome.pageAction.onClicked.addListener()
-        ```
-
-        This is a bit of a mouthful so let's look at it:
-
-        - chrome is the browser<!-- .element: class="delayed" -->
-        - pageAction is the button \(Remember the pageAction part of our manifest? It's looking there\)<!-- .element: class="delayed" -->
-        - onClicked is the wait. Don't run the script right away. Wait until we click on the button<!-- .element: class="delayed" -->
-        - addListener is the command. When we click, do this:<!-- .element: class="delayed" -->
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Make your button do something
-
-        It's verbose, that's for sure. Here's the next part:
-
-        ```javascript
-        function() {}
-        ```
-        A function is essentially a command, or series of commands, to run on demand. This part sits in between the parentheses for the previous part. It's what will be triggered as soon as you press the button.
-
-        Together, they look like this:
-
-        ```javascript
-        chrome.pageAction.onClicked.addListener( function() {} );
-        ```
-
-        The portion in between the curly braces  {}  is where we focus our attention now.
+        #Functions
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Adding functionality to your script
+        #What is a Function?
 
-        This is the part where we use the "active tab" permission we put in our manifest earlier.
+        A function is a name for a set of commands or instructions.
 
-        ```javascript
-        chrome.tabs.query(
-          {active: true, currentWindow: true},
-          function(tabs) { }
-        )
-        ```
+        When using a function, it executes all the commands contained within, making it easier to make the code repeat repetitive steps.
 
-        Chrome first goes to the active window you have open right now, then the active tab you have open right now.
+        Let's look at two functions, alert() and prompt(). These come built into JavaScript
 
-        Once it finds that active tab, it can run some code in it. That's another function.
+        Note the syntax, the parentheses (), must be included
 
-        We call these "nested functions" because they sit inside of each other and rely on each other. But they sure make for some confusing reading. <!-- .element: class="delayed" -->
-
-        All together, your script file should look like this: <!-- .element: class="delayed" -->
-
-        ```javascript
-        chrome.pageAction.onClicked.addListener(function() {
-          chrome.tabs.query(
-            {active: true, currentWindow: true},
-            function(tabs) { }
-          )
-        });
-        ```
-        <!-- .element: class="delayed" -->
+        Go back to the console and type both functions in, one at a time, and see what happens.
 
 
       </script>
@@ -576,160 +519,150 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Adding functionality to your script
+        #Functions and Arguments
 
-        Now we go another layer deeper into the matrix.
+          We've seen now that alert() and prompt() create a pop-ups in the browser but the pop-ups are blank. 
 
-        Take a deep breath.
+          An argument can be passed into the functions by adding a value within the parentheses ().
 
-        Here we go.
+          Try this in the console:
+        alert("Hello!");
+        prompt("What day is it today?");
+          It will look similar to this:
+          GIF
+      </script>
+    </section>
 
-        Inside our latest set of curly braces ( {} ) add this little bit:
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Make your own function!
 
-        ```javascript
-        chrome.tabs.executeScript(
-          tabs[0].id,
-          {code: 'document.body.style.backgroundColor = "green";'}
-        );
-        ```
+          You can create your own functions that can contain any number of instructions that you need, including other functions.
+          Use the function keyword to declare a new function.
 
-        PAUSE! Any guesses on what this means?
+      function sayAnything(){
+      alert("Hello!");
+      prompt("What day is it today?");
+      }
 
-        Breaking it down: <!-- .element: class="delayed" -->
+        The above example creates a new function called sayAnything but similar to variables, nothing will happen until the function is called.
 
-        * chrome is the browser <!-- .element: class="delayed" -->
-        * tabs is the active tab that we isolated in the previous step <!-- .element: class="delayed" -->
-        * code is what you're going to execute inside of that tab <!-- .element: class="delayed" -->
-        * document.body... is JavaScript and that's what you are sending into the tab to run on the page <!-- .element: class="delayed" -->
-
+        Call the function by using it’s name and adding () smooth brackets behind it.
+      
+      sayAnything()
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #You can also leave comments for yourself
+        #What is a Method?
 
-        If you want to leave little notes for yourself in your code, you can always do so with a // before your note.
+          Methods are functions that are performed on a specific type object.
 
-        The // is called "commenting" because it tells the computer to ignore that line of text. It's just a note to yourself.
+          For example
 
-        Comments end up looking something like this:
+      Var myName = “SANDRA”
+      myName.toLowerCase()
 
-        ```javascript
-        // This is just a comment
-        ```
+        That method returns “sandra”
+
+        toLowerCase is a function that is specific to the variable type string.  It wouldn’t make any sense to call it on a number.
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Checking in
+        #Using Methods - Dot Notation
 
-        Overall, your whole script.js file should look like this.
+          In our previous example
 
-        ```javascript
-        chrome.declarativeContent.onPageChanged.removeRules(
-          undefined,
-          function() {
-            chrome.declarativeContent.onPageChanged.addRules([{
-              conditions: [new chrome.declarativeContent.PageStateMatcher({pageUrl: {schemes: ['https', 'http', 'localhost', 'chrome']},})],
-              actions: [new chrome.declarativeContent.ShowPageAction()]
-            }]);
-          }
-        );
+      myName = “SANDRA”
+      myName.toLowerCase()
 
-        chrome.pageAction.onClicked.addListener(function() {
-          chrome.tabs.query(
-            {active: true, currentWindow: true},
-            function(tabs) {
-              chrome.tabs.executeScript(
-              tabs[0].id,
-              {code: 'document.body.style.backgroundColor = "green";'}
-            );
-          });
-        });
-        ```
+          This expression returns the string “sandra”
 
+          myName.charAt(3)returns “D” (b/c we’re still referencing the capitalized variable
+
+          However, we can chain the methods together.  The second method will act on the returned value of the previous method.
+
+          myName.toLowerCase().charAt(3) - now returns “d”
+
+          charAt is acting on “sandra”, which was the return value of toLowerCase()
       </script>
     </section>
 
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        #That's right
+        #Arrays
 
-        ![Deputy Chief Hardy from the movie 22 Jump Street looking very unimpressed.](framework/img/workshop/unimpressed.gif)
-
-        All of those steps until now have allowed us to run one line of JavaScript on the page loaded into our tab:
-
-        ```javascript
-        document.body.style.backgroundColor = "green";
-        ```
+        
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Give it a shot with your neighbour
+        #What is an Array?
 
-        Load up a variety of pages. Tap the button you made. Watch the background colour of those pages change before your eyes.
+        An array is a way to group similar data together.
 
-        Note how different web pages behave differently under the power of your extension. Try a news site, a Twitter profile, Google.
+        Arrays can be thought of like lists.
 
-        ----
-
-        ##Note
-
-        If you're offline, or the internet is slow where you are, you can load the "index.html" files in both the offline1 and offline2 folders into Chrome. The extension will also work with those pages.
+        For example you could turn a grocery list into an array.
+    var grocery_list = [🍋,🍐,🍅,🍑,🍊,🍒,🍇]
+      
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Unlimited cosmic power
+        #The Anatomy of an Array
 
-        But this is just one way to edit these pages.
+        If we look at the grocery list from the previous slide:
+        var grocery_list = [🍋,🍐,🍅,🍑,🍊,🍒,🍇]
 
-        Now that you have the button set up, you can tell it to edit these pages in any way you see fit.
+        You can see that we create a variable to store the array, in the same way we create a variable to store a single value.
 
-        You have all of the power.
-
-        ![A cartoon character dressed in all black with orange goggles furiously typing on a laptop.](framework/img/workshop/hack.gif)
+        The array itself is create with square brackets  [ ] and each data value is separated by commas ,
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #The simple life
+        #What kind of data can Arrays Store?
 
-        With a lot of code, we end up doing a lot of setup work to make our actual construction work a lot easier. This is one of those situations.
+        What kind of data can be stored in array?
 
-        Up until now we've been setting up our extension to:
+        Every type of data 🎉
 
-        * exist in our extensions with our own title and description<!-- .element: class="delayed" -->
-        * have permission to identify and manage our tabs<!-- .element: class="delayed" -->
-        * have a button with our logo of choice on it<!-- .element: class="delayed" -->
-        * run a script file of our choosing when someone clicks that button   <!-- .element: class="delayed" -->
+        Arrays can store numbers: [45, 345, 789]
+
+        They can store strings: [‘this’, ‘that’, ‘the other’]
+
+        They can even store other arrays - this is known as a Matrix 💻
+      
+      [
+      [4, 5, 6, 6 ,7, 8],
+      [5, 8, 6, 9 ,1, 3],
+      [1, 9, 3, 4 ,6, 9],
+      ]
+
+        Matrixes are how computer stores tabular data - similar to excel.
 
       </script>
     </section>
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #The ethical life
+        #Leanne's Slides start after this One
 
-        This raises some necessary ethical questions:
+        I left the slide in just for seeing how formatting works.  But everything after this can be deleted
 
-        * When you have the power to run scripts on other people's computers, what responsibilities do you have toward those people? <!-- .element: class="delayed" -->
-        * When people give you power to manage their tabs, what are they trusting you to do? <!-- .element: class="delayed" -->
-        * When you have access to someone's browser, what data is it OK to collect, and what data should you leave behind? <!-- .element: class="delayed" -->
-        * People are allowing us into their lives and we have a responsibility to not make their lives worse. <!-- .element: class="delayed" -->
-
-        Writing code is a space with a lot of really interesting ethical questions. It's very important to keep them top of mind when coming up with projects you want to work on. <!-- .element: class="delayed" -->
+        
       </script>
     </section>
 
