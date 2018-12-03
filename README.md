@@ -1,8 +1,7 @@
 ## English:
 
-# National Ladies Learning Code Day
 
-## Intro to Browser Extensions with JavaScript
+## Intro to Data Visualization
 
 A full day introductory workshop where learners build their own Chrome Extension using JavaScript.
 
