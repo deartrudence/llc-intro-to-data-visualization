@@ -3,7 +3,7 @@
 
 ## Intro to Data Visualization
 
-A full day introductory workshop where learners build their own Chrome Extension using JavaScript.
+A full day introductory workshop where learners build a cool graph using D3.js
 
 ## Quick Links
 
