@@ -16,24 +16,32 @@ Mentor Huddle: (Instructor to facilitate the morning of) <a href="https://ladies
 
 ## Description
 
-### Why learn about browser extensions?
-Browser extensions are small software programs that modify and enhance our experience on the web. They range from playful to practical, with the goal of doing one thing, well. Extensions can help customize our browsing experience, or increase productivity by reducing repetitive tasks. In this workshop, we will use code as a tool of empowerment, to develop agency and harness change through building our own extension for Google Chrome!
+### Why learn about data visualization?
+In a world where there is more data than most of us really know what to do with, how do we go about displaying facts in a clear and visually engaging way? D3Js is a JavaScript library that helps bring data to life using HTML, CSS, and SVGs. 
 
-During this experience, we’ll learn the basics of JavaScript - with a focus on variables and loops - and use this programming language to interact with websites to perform tasks like replacing or modifying content.  We’ll explore permissions and discuss ethics around extensions to help learners protect their privacy online.  Learners will utilize developer tools to explore things like DOM manipulation, and leave with a personalized extension installed in their browser. We’ll also provide resources for learners to modify the extension for additional browsers, and make it available for others to install and use!
+D3JS allows us to take big data and make it beautiful and meaningful through data visualization. It’s also great for beginners, as it has a lot of libraries (like c3js.org) that provide pre-designed charts that can be easily customized. 
 
-This workshop is designed to be a hands-on experience, where learners will:
-* learn basic programming techniques and concepts that are translatable to other programming languages
-* review the basic building blocks of how HTML, CSS, and JavaScript work together to create richer online experiences
-* load and update extensions using Chrome’s developer mode
-* modify and replace elements using JavaScript (more kittens on the web!)
-* get an idea of the resources available in order to continue learning
+What will you learn at this workshop? 
+
+In this workshop, we’ll learn the basics of JavaScript while using the console, including concepts like Arrays and Functions. We’ll explore the anatomy of SVGs (scalable vector graphics) and how they can be leveraged programmatically. Learners will use their knowledge to create data visualizations like scatterplots, and make them interactive, for users to engage with and enjoy. 
+
+Specifically, we will cover the following:
+
+* An overview of JavaScript
+* An overview of D3JS, why it's cool, and how you can use it in the workplace
+* How to create SVGs with code
+* How to grab data from the .csv file and visually display it using geometrical shapes
+* How to integrate basic user interaction in order to navigate around your data (and be able to see some cool animations!)
+* Coding in RGB colour, and the importance of colour in data visualizations.
+
+
 
 ### Special Requirements
 None.
 
 ## Attributions
 
-Content created by [William Wolfe-Wylie](http://www.wolfewylie.com) for [Canada Learning Code](http://canadalearningcode.ca).
+Content created by [Leanne Shapton and Trudy Macnabb](http://www.google.com) for [Canada Learning Code](http://canadalearningcode.ca).
 
 Slide presentation created by [Christina Truong](http://christinatruong.com) for [Canada Learning Code](http://canadalearningcode.ca).
 
