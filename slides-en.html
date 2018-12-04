@@ -160,20 +160,23 @@
         * <a href="https://pudding.cool/">pudding.cool</a>
         * <a href="https://www.informationisbeautifulawards.com/news/118-the-nyt-s-best-data-visualizations-of-the-year">New York Times</a>
 
-
+        <a href="https://archive.nytimes.com/www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html">
+          <img style="max-width:750px;"src="./framework/img/D3NYTTaxRates.png" alt="">
+        </a>
 
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide title centered" data-markdown>
       <script type="text/template">
-        #SVGs (Scalable Vector Graphics)
+        #SVGs 
+        ##(Scalable Vector Graphics)
 
-        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](framework/img/workshop/got_this.gif)
+        
       </script>
     </section>
 
-    <section class="slide centered" data-markdown data-toc>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #What is an SVG?
 
@@ -189,6 +192,14 @@
     <section class="slide centered" data-markdown data-toc>
       <script type="text/template">
         #Example SVG
+            
+          <img src="./framework/img/svgcode.jpg" alt="">
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Example SVG
 
         Note that the tags are very similar to HTML  ```<svg></svg>```
 
@@ -201,13 +212,12 @@
         The `<g>`tag is used to group paths together and usually doesn’t have it’s own attributes.
 
 
-       `<svg xmlns="http://www.w3.org/2000/svg"  version="1.1" x="0px" y="100px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100"><path fill="pink" stroke="pink" strokeWidth="3" strokeMiterlimit="10" d="M43.484,35.727c0,0-0.245-7.84-0.021-15.071  c0.084-2.731-0.239-5.305,0.636-6.764C45.833,11,52.22,4.27,54.325,6.437c0.467,0.48,1.455,3.84,1.857,9.714  c0.49,7.208,0.447,15.467,0.447,19.576" /><path fill="#000000" d="M59.676,58.062H40.489V34.997h19.187V58.062z M58.375,36.496H41.846v20.835h16.529V36.496z" /><g><path fill="#000000" d="M62.139,90.66c0,2.201-1.799,4-4,4H42.026c-2.2,0-4-1.799-4-4V61.52c0-2.2,1.8-4,4-4h16.113   c2.201,0,4,1.8,4,4V90.66z M60.76,62.586c0-2.199-1.801-4-4-4H43.334c-2.2,0-4,1.801-4,4v27.059c0,2.199,1.8,4,4,4H56.76   c2.199,0,4-1.801,4-4V62.586z" /></g></svg>`
 
 
       </script>
     </section>
 
-    <section class="slide centered" data-markdown>
+    <section class="slide" data-markdown>
       <script type="text/template">
         # Rendering an SVG
 
@@ -217,7 +227,7 @@
       </script>
     </section>
 
-    <section class="slide centered" data-markdown data-toc>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #SVGs and D3
 
@@ -249,14 +259,20 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide title" data-markdown>
       <script type="text/template">
         #JavaScript !!
-
+  
       </script>
     </section>
 
     <section class="slide centered" data-markdown>
+      <script type="text/template">
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](framework/img/workshop/got_this.gif)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
       <script type="text/template">
         #What is JavaScript?
 
@@ -268,11 +284,11 @@
 
         Here's what JavaScript looks like:
 
-      ```var myVariable = "Hello World";
-      function sayHello(){
-        alert(myVariable);
-      }
-      sayHello();```
+    var myVariable = "Hello World";
+    function sayHello(){
+      alert(myVariable);
+    }
+    sayHello();
 
       </script>
     </section>
@@ -284,6 +300,16 @@
         Because JavaScript is a programming language, the structure and syntax include more complexities than HTML or CSS.
 
         The basic building blocks of programming include features such as variables, functions, objects or control structures such as if statements or loops.
+
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)
+        
+      </script>
+    </section>
+    
+    <section class="slide centered title" data-markdown>
+      <script type="text/template">
+        ##The console
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)
       </script>
     </section>
     <section class="slide" data-markdown>
@@ -291,6 +317,7 @@
         #The console
 
         Before we get into the nitty-gritty details of these JavaScript principles, let’s take a look at a tool called the console.
+        
 
         We'll be using this tool in the upcoming exercises to focus on getting used to the programming syntax.
 
@@ -315,16 +342,6 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Changing the icon
-
-        Because people arrive at your extension on different devices, you need to provide a few different sizes of your icons.
-
-        Hint: You can find some stand-in icons in the project folder that you are free to use. If you're familiar with photo editing software like Photoshop, you can also make your own.
-
-      </script>
-    </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -333,9 +350,13 @@
         You can open the console when viewing any HTML page. In Chrome, there are different ways to open the Console tab.
 
         Keyboard shortcut:
+
         COMMAND + OPTION + J (MAC)
+
         CONTROL + SHIFT + J (WINDOWS)
+
         OR
+
         Select: View > Developer > JavaScript Console.
 
 
@@ -343,14 +364,14 @@
     </section>
 
 
-    <section class="slide centered" data-markdown>
+    <section class="slide centered title" data-markdown>
       <script type="text/template">
         #Variables
 
       </script>
     </section>
 
-    <section class="slide centered" data-markdown>
+    <section class="slide" data-markdown>
       <script type="text/template">
         #What is a Variable
 
@@ -373,7 +394,7 @@
         #Declaring A Variable
 
         * Use the keyword var
-        * Name the variable anything you want*
+        * Name the variable anything you want
         * End the command with a semi-colon (;)
 
       var myVariable = "Hello!";
@@ -388,32 +409,46 @@
       </script>
     </section>
 
-    <section class="slide centered" data-markdown data-toc>
+    <section class="slide" data-markdown>
       <script type="text/template">
         #Variable Naming Conventions
 
         Cannot contain spaces:
+
         * Use camelCase for names with multiple words.
         * Every new word is capitalized
         * The result looks kind of like camelHumps
         Cannot contain reserved symbols:
         * math symbols (+, -, =, etc...)
         * javascript-specific symbols ({, }, :, etc...)
+
         Cannot begin with:
+
         * a digit (0 - 9)
+
         JavaScript is case sensitive
+
         * so variable names are also case sensitive
 
-        Use a descriptive names: var firstName; ← Clear that first name will go here.
-
-        var fn; ← Not as obvious as firstName.
-
-        var x; ← Not clear at all.
-
+        
       </script>
     </section>
-
+    
     <section class="slide" data-markdown>
+      <script type="text/template">
+        # Good Variable Naming
+        
+        Use a descriptive names: 
+        
+        var firstName; ← Clear that first name will go here.
+    
+        var fn; ← Not as obvious as firstName.
+    
+        var x; ← Not clear at all.
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
       <script type="text/template">
         # Variable Types
 
@@ -488,12 +523,16 @@
 
       var endingValue = startingValue * multiplier;
 
-        To the right of the ‘=’ startingValue * multiplier; is called an expression.  The variable stores the evaluation of that expression.  In this case 5 * 2 is 10, so the variable endingValue will return a value of 10.
+        To the right of the ‘=’ startingValue * multiplier; is called an expression.  
+        
+        The variable stores the evaluation of that expression.  
+        
+        In this case 5 * 2 is 10, so the variable endingValue will return a value of 10.
 
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide title" data-markdown>
       <script type="text/template">
         #Functions
 
@@ -527,10 +566,10 @@
           An argument can be passed into the functions by adding a value within the parentheses ().
 
           Try this in the console:
-        alert("Hello!");
-        prompt("What day is it today?");
-          It will look similar to this:
-          GIF
+
+      alert("Hello!");
+      prompt("What day is it today?");
+
       </script>
     </section>
 
@@ -595,7 +634,7 @@
     </section>
 
 
-    <section class="slide centered" data-markdown>
+    <section class="slide centered title" data-markdown>
       <script type="text/template">
         #Arrays
 
@@ -657,7 +696,7 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide centered" data-markdown>
       <script type="text/template">
         #Let's create some SVGs
 
@@ -738,7 +777,7 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide centered" data-markdown>
       <script type="text/template">
         #Exercise as group (90 minutes)
 
