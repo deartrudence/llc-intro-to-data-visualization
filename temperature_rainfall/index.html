@@ -8,10 +8,7 @@
 	</head>
 	<body>
     <h1>Temperature & Rainfall by month</h1>
-		<div id="tooltip" class="hidden">
-			<p><strong>Temperature: </strong><span id="value">100</span>°C</p>
-			<p><strong>Rainfall: </strong><span id="value">100</span>mm</p>
-		</div>
+
 		<script type="text/javascript">
       // Width and height
       var w = 1200;
@@ -31,120 +28,7 @@
         { label: "Nov", temperature: 5, rainfall: 50 },
         { label: "Dec", temperature: -1, rainfall: 20}
       ]
-			var minTemperature = d3.min(dataset, (d) => d.temperature)
-			var maxTemperature = d3.max(dataset, (d) => d.temperature)
-			var range = maxTemperature - minTemperature
-			var yScale = d3.scaleLinear()
-				.domain([minTemperature - 5, maxTemperature + 5])
-				.range([h - (padding * 2), padding]);
-			var xScale = d3.scaleBand()
-        .domain(d3.range(dataset.length))
-        .range([padding * 2, w])
-			var rScale = d3.scaleLinear()
-				.domain([0, d3.max(dataset, (d) => d.rainfall)])
-				.range([0, 50]);
-
-			//Axis
-			var yAxis = d3.axisLeft(yScale)
-				.ticks(5);
-			var xAxis = d3.axisBottom(xScale).tickFormat("");
-
-			//Gridlines
-			var gridlines = d3.axisLeft()
-				.ticks(5)
-				.tickFormat("")
-				.tickSize(- ( w - (padding *2)))
-				.scale(yScale);
-
-      // Create SVG element
-      var svg = d3.select("body")
-        .append("svg")
-        .attr("width", w)
-        .attr("height", h);
-
-			// Create circles
-			svg.selectAll("circle")
-				.data(dataset)
-				.enter()
-				.append("circle")
-				.attr('cy', (d) => yScale(d.temperature))
-				.attr('cx', (d,i) => xScale(i))
-				.attr('r', (d) => rScale(d.rainfall))
-				.attr("fill", function(d) {
-					if (d.temperature > (range * 2 / 3)) {
-						return "rgba(16, 79, 252, 0.7)";
-					} else if (d.temperature >  (range * 1 / 3))  {
-						return "rgba(66, 175, 240, 0.7)";
-					} else {
-						return "rgba(21, 210, 252, 0.7)";
-					}
-				})
-				.on("mouseover", function(d) {
-					var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale.bandwidth() / 2;
-					var yPosition = parseFloat(d3.select(this).attr("cy")) + padding;
-					//Update the tooltip position and value
-					d3.select("#tooltip")
-						.style("left", xPosition + "px")
-						.style("top", yPosition + "px")
-						.select("#value")
-						.text(d.temperature);
-
-					//Show the tooltip
-					d3.select("#tooltip").classed("hidden", false);
-
-				})
-				.on("mouseout", function() {
-
-				 //Hide the tooltip
-				 d3.select("#tooltip").classed("hidden", true);
-
-				})
-
-			//Create labels
-			svg.selectAll("text")
-				.data(dataset)
-				.enter()
-				.append("text")
-				.attr("class", "months")
-				.attr('y', h - (padding * 2) + 20)
-				.attr('x', (d,i) => xScale(i) - 10)
-				.text((d)=> d.label)
-
-			// Add yAxis
-			svg.append("g")
-			 .attr("class", "axis")
-			 .attr("transform", "translate(" + padding + ",0)")
-			 .call(yAxis);
-
-		 // yAxis label
-		 svg.append("text")
-			.attr("class", "axisLabel")
-			.attr("transform", "rotate(-90)")
-			.attr("y", 0)
-			.attr("x",0 - (h / 2))
-			.attr("dy", 20)
-			.style("text-anchor", "middle")
-			.text("Temperature");
-
-			// Add xAxis
-			svg.append("g")
-			 .attr("class", "axis")
-			 .attr("transform", "translate(-" + padding + "," + (h - (padding * 2)) + ")")
-			 .call(xAxis);
-
-			// Axis label
-			svg.append("text")
-				.attr("class", "axisLabel")
-				.attr("transform","translate(" + (w/2) + " ," + (h - 40) + ")")
-				.style("text-anchor", "middle")
-				.text("Month");
-
-			// Create horizontal gridlines
-			svg.append("g")
-			 .attr("class", "grid")
-			 .attr("transform", "translate(" + padding + ",0)")
-			 .call(gridlines);
-
+			
 		</script>
 	</body>
 </html>
