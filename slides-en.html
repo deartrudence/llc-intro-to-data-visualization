@@ -61,12 +61,12 @@
       <div class="instructions">
         <!-- ADD WIFI INFO HERE -->
         <h2>Get <br>Connected</h2>
-        <p><strong>Wifi:</strong> Network</p>
-        <p><strong>Password:</strong> Password</p>
+        <p><strong>Wifi:</strong> clcguest</p>
+        <p><strong>Password:</strong> Helloworld</p>
         <hr>
         <h2>Download<br> & Install</h2>
         <ol class="downloads">
-          <li>Learner files (zip file): <a href="https://github.com/deartrudence/llc-intro-to-data-visualization/archive/master.zip">http://bit.ly/llc-intro-to-data-visualization</a>
+          <li>Learner files (zip file): <a href="https://github.com/deartrudence/llc-intro-to-data-visualization/archive/master.zip">http://bit.ly/llc-d3js-pilot</a>
             <ul>
               <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
               <li>open <em>slides.html</em> in the browser to view the slides</li>
@@ -84,7 +84,7 @@
       <footer>
         <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
             src="framework/img/cc-by-nc.png" /></a>
-        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a
+        <p class="left">Content created by <a href="https://twitter.com/dear_trudence">Trudy MacNabb</a> and <a href="https://twitter.com/leeshapton">Leanne Shapton</a> for <a
             prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName"
             rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span>
@@ -124,6 +124,36 @@
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
+            #Today's Projects
+    
+            First we'll create a line chart.
+            <img src="./framework/img/workshop/linechart.png" alt=""> 
+            Then we'll create a bubble chart.
+            <img src="./framework/img/workshop/bubblechart.png" alt=""> 
+
+            
+          </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Today...
+
+        We will learn a whole pile of things:
+
+        * Review JavaScript
+        * Learn about Types of Graphs 
+        * Learn basic SVG shapes
+        * D3 scales and axis
+        * Create graphs from code!
+
+        <p>We can also use what we'll learn today to create something fun, like this: <a href="https://bl.ocks.org/mbostock">Bl.ocks</a>, or something really cool, like this: <a href="https://pudding.cool/">The Pudding</a></p><!-- .element: class="delayed" -->
+    
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
         #Why Data visualization?
 
         In today’s world so much data is being collected that could prove to be useful.  However, large sets of data can often be overwhelming and hard to share meaningful information and insights. Creating visualizations can help distill that information in a more compelling fashion and helps tell a story with the data.
@@ -141,6 +171,31 @@
         This library takes care of the calculations such as scaling and arching, as well as DOM manipulation and transitions
 
         D3.js creates SVGs that when combined with HTML &CSS produce responsive websites for sharing complex information.  D3 also uses data-driven transformations and transitions to showcase changes to the data.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Let's Talk about Graphs
+        
+        ##Bar chart
+        show numbers that are independent of each other.
+         <img src="./framework/img/workshop/barchartex.png" alt="" style="width: 50%"> 
+        http://www.typesofgraphs.com/bar-graphs/
+
+
+        ##Line chart
+        show you how numbers have changed over time.
+         <img src="./framework/img/workshop/linechartex.png" alt="" style="width: 50%"> 
+        http://www.typesofgraphs.com/line-graphs/
+
+
+        ##Pie chart
+        show you how a whole is divided into different parts. 
+         <img src="./framework/img/workshop/piechartex.png" alt="" style="width: 50%"> 
+
+        http://www.typesofgraphs.com/pie-charts/
+           
       </script>
     </section>
 
@@ -186,6 +241,22 @@
         It scales without any loss of image quality and because it is code it can be created by a program.
 
       </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+            #SVG v PNG?
+    
+            ##PNG
+            PNGs will pixelate if you try to make them bigger
+            <img src="./framework/img/workshop/pngex.png" alt="" > 
+
+            ##SVG
+            SVG are scalable.  Because SVGs are essentially code and the code decides how to render the image.
+
+            <img src="./framework/img/workshop/svgex.png" alt="" > 
+    
+          </script>
     </section>
 
     <section class="slide centered" data-markdown data-toc>
@@ -271,7 +342,7 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #What is JavaScript?
 
@@ -290,8 +361,20 @@
     sayHello();
 
       </script>
-    </section>
+    </section> -->
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Let's Review JavaScript!
+
+        * Controls the behavior of HTML documents
+        * Used to animate, hide or show items
+        * React to user input
+        * Process data and more!
+
+      </script>
+    </section>
+<!-- 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #What is Programming?
@@ -301,6 +384,18 @@
         The basic building blocks of programming include features such as variables, functions, objects or control structures such as if statements or loops.
 
         ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)
+        
+      </script>
+    </section> -->
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Pair Reviewing
+
+        The basic building blocks of programming include features such as variables, functions, objects or control structures such as if statements or loops.
+
+        We're going to get together in pairs or threes, and explain to eachother some JavaScript concepts.
+
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](https://media.giphy.com/media/1S0yAfcPjgCLS/giphy.gif)
         
       </script>
     </section>
@@ -315,17 +410,12 @@
       <script type="text/template">
         #The console
 
-        Before we get into the nitty-gritty details of these JavaScript principles, let’s take a look at a tool called the console.
-        
-
-        We'll be using this tool in the upcoming exercises to focus on getting used to the programming syntax.
-
-        This way, we can write programs without relying on HTML & CSS and learn some of the fundamental programming concepts first.
+        One partner in your group, show the others how to open up the console from the browser. Then do some simple equations like `1 + 1`.
 
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Getting comfortable with the console
 
@@ -339,7 +429,7 @@
         Important! The blue > symbol represents a space to enter your input but you don't have to actually type the symbol.
 
       </script>
-    </section>
+    </section> -->
 
 
     <section class="slide" data-markdown>
@@ -372,23 +462,33 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
+            #What is a Variable
+    
+            Have a different person in your group explain to people what a variable is.
+
+            * How do we define them?
+            * Why do we use them?
+            * What are different types?
+          </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
         #What is a Variable
 
         Variables are like containers or a box.
-        * used to store values
-        * can be used any time, whenever you need them
-        * gives a name to a value.
+
+      * used to store values
+      * can be used any time, whenever you need them
+      * gives a name to a value.
 
         A variable is a named memory location which contains information, to be used at a later time.
 
         For example, a variable could be used to store a customer's email address. Then, the variable can be used to send a confirmation email.
-
-
-
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Declaring A Variable
 
@@ -406,9 +506,9 @@
 
 
       </script>
-    </section>
+    </section> -->
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Variable Naming Conventions
 
@@ -431,9 +531,9 @@
 
         
       </script>
-    </section>
+    </section> -->
     
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         # Good Variable Naming
         
@@ -445,16 +545,16 @@
     
         var x; ← Not clear at all.
       </script>
-    </section>
-    
+    </section> -->
+<!--     
     <section class="slide title" data-markdown>
       <script type="text/template">
         # Variable Types
 
       </script>
-    </section>
+    </section> -->
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         # String
 
@@ -469,10 +569,10 @@
       var greeting = "Good evening!";
 
       </script>
-    </section>
+    </section> -->
 
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Strings + Concatenation
 
@@ -491,9 +591,9 @@
       var greetingFull = Good morning!
 
       </script>
-    </section>
+    </section> -->
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Numbers
 
@@ -509,9 +609,9 @@
          This will return a value of 7.
 
       </script>
-    </section>
+    </section> -->
 
-    <section class="slide nested-list" data-markdown>
+    <!-- <section class="slide nested-list" data-markdown>
       <script type="text/template">
         #Numbers + Expressions
 
@@ -529,7 +629,7 @@
         In this case 5 * 2 is 10, so the variable endingValue will return a value of 10.
 
       </script>
-    </section>
+    </section> -->
 
     <section class="slide title" data-markdown>
       <script type="text/template">
@@ -538,6 +638,16 @@
       </script>
     </section>
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #What is a Function?
+
+        Have someone in your group explain what a function is and how is it used.
+
+        Have another person explain what an argument is.
+
+      </script>
+    </section>
     <section class="slide" data-markdown>
       <script type="text/template">
         #What is a Function?
@@ -560,9 +670,10 @@
       <script type="text/template">
         #Functions and Arguments
 
-          We've seen now that alert() and prompt() create a pop-ups in the browser but the pop-ups are blank.
 
           An argument can be passed into the functions by adding a value within the parentheses ().
+
+          Allows you to add custom data to a function.
 
           Try this in the console:
 
@@ -572,7 +683,7 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Make your own function!
 
@@ -589,6 +700,17 @@
         Call the function by using it’s name and adding () smooth brackets behind it.
 
       sayAnything()
+
+      </script>
+    </section> -->
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #What is a Method?
+
+          Have a person in your group explain the difference between a Method and Function.
+
+          Have a different person explain different ways to access methods (hint: dot notation)
 
       </script>
     </section>
@@ -613,22 +735,19 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Using Methods - Dot Notation
+        #Using Methods 
 
-          In our previous example
+          One way to access methods on an Object is dot notation.
 
       myName = “SANDRA”
       myName.toLowerCase()
 
-          This expression returns the string “sandra”
+          Another way is to use bracket notation.
 
-          myName.charAt(3)returns “D” (b/c we’re still referencing the capitalized variable
+      myName = "SANDRA"
+      myName[toLowerCase]()
 
-          However, we can chain the methods together.  The second method will act on the returned value of the previous method.
 
-          myName.toLowerCase().charAt(3) - now returns “d”
-
-          charAt is acting on “sandra”, which was the return value of toLowerCase()
       </script>
     </section>
 
@@ -638,6 +757,15 @@
         #Arrays
 
 
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #What is an Array?
+
+        Have a person in your group explain what arrays are.
 
       </script>
     </section>
@@ -656,7 +784,7 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #The Anatomy of an Array
 
@@ -668,9 +796,9 @@
         The array itself is create with square brackets  [ ] and each data value is separated by commas ,
 
       </script>
-    </section>
+    </section> -->
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #What kind of data can Arrays Store?
 
@@ -693,7 +821,7 @@
         Matrixes are how computer stores tabular data - similar to excel.
 
       </script>
-    </section>
+    </section> -->
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
@@ -773,6 +901,241 @@
           y2="0"
         >
         ```
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #Our first chart
+
+        ## Line Chart
+
+        ![Example scatterplot plotting temperature and rainfall by month](framework/img/workshop/linechart.png)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #The Data
+
+        We're looking at the use of bikeshares in Toronto, in hours, for each month in the year.
+
+      var bikeshare = [
+			{month: "Jan", duration_in_hours:	7441},
+			{month: "Feb", duration_in_hours:	8345},
+			{month: "Mar", duration_in_hours:	9071},
+			{month: "Apr", duration_in_hours:	20618},
+			{month: "May", duration_in_hours:	26635},
+			{month: "Jun", duration_in_hours:	40948},
+			{month: "Jul", duration_in_hours:	77591},
+			{month: "Aug", duration_in_hours:	79255},
+			{month: "Sep", duration_in_hours:	70381},
+			{month: "Oct", duration_in_hours:	46951},
+			{month: "Nov", duration_in_hours:	9204},
+			{month: "Dec", duration_in_hours:	25409}
+		]
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #The Setup
+
+        *** SPACING AND SIZES ***
+
+        Find minium and maximum values for hours in the bikeshare array
+
+      const minDuration = d3.min(bikeshare, (d) => d.duration_in_hours)
+      const maxDuration= d3.max(bikeshare, (d) => d.duration_in_hours)
+ 
+
+      console.log("min", minDuration, "max", maxDuration)
+
+        Set up the spacing and sizing for the graph
+        Use the margin convention practice 
+        
+      const margin = {top: 70, right: 70, bottom: 70, left: 70}
+      const width = window.innerWidth / 2
+      const height = 450
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #The Setup
+
+            *** SCALES - X Scale ***
+
+
+            Scale band creates equally spaced points in this case there are 12 months and 12 datapoints (ie bikeshare.length)
+
+            So, scaleBand spreads each datapoint out equally along the X axis (we use this function later when defniing the X axis)
+
+             X scale will use the number of elements
+          
+		  const xScale = d3.scaleBand()
+        .domain(d3.range(bikeshare.length))
+        .range([0, width])
+
+        console.log(xScale(3))
+        console.log(d3.range(bikeshare.length))
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #The Setup
+
+            *** SCALES - Y Scale ***
+
+
+            Y scale will use the duration_in_hours datapoint
+
+            Scale linear takes in the values from the dataset as the domain and scales it down (or up) to fit within the graph
+            
+            We're using this for the Y axis, so we want it to fit within the height.
+            
+            Also, we're using minDuration - 5000 and maxDuration + 5000, so that our datapoints don't touch the very top or bottom of the page (this is just visually pleasing)
+            
+        const yScale = d3.scaleLinear()
+        .domain([minDuration - 5000, maxDuration + 5000]) // input 
+        .range([height, 0]); // output 
+
+        console.log(yScale(5000))
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #Generate Line
+
+
+          ##D3's line generator 
+          This generator essentially loops through each data object in the array.  This sets the x values and the y values for the points that will make up the line
+          
+          For x we use the xScale, and since it's concerned with just the number of elements we pass it in the index value
+          
+          For y we use the yScale and it is concerned with the duration, so we pass in the duration_in_hours from the data object
+
+          ++++
+          You may notice that we're not actually referencing the data in any way here.
+          
+          That is because we're creating a variable 'line', which will be a function, based on the info we give it.
+          
+          Later when create the actual SVG, we will will call this function to create the line
+
+		const line = d3.line()
+    .x((d, i) => {console.log('line', d); return xScale(i); }) 
+    .y((d) => yScale(d.duration_in_hours) ) 
+    .curve(d3.curveMonotoneX) // apply smoothing to the line
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #PUT IT ON THE PAGE
+
+          ##Add the SVG to the page 
+          Here we're telling d3 to grab the element with the id of chart and append an svg to it.
+
+          Then we give it height and width attributes.  We use the height and width we set above and also add the margins we set above.
+
+          The reason we need the margins is that we need room for the axes labels.  And it's also nice to have a bit of padding around the chart itself in theis example the chart size plus margin is the white space.
+
+          You'll notice that we also apend a 'g', g in svgs are for grouping and we'll be adding all the details of the chart into this group
+    
+
+		const svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #PUT IT ON THE PAGE
+
+          ##X-AXIS
+
+          Call the x axis in a group tag
+
+          We create a group and translate it to the bottom of the chart using the height attribute since everything in an SVG starts at the top left corner,  translating it the height will put it at the bottom of the chart.
+
+          Then we set the axisBottom using the xScale we created above.
+
+          Finally we add ticks to the axis with the value of the month.
+    
+
+		svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(xScale).tickFormat((d) => bikeshare[d].month)); // Create an axis component with d3.axisBottom
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #PUT IT ON THE PAGE
+
+          ##Y-AXIS
+
+          Call the y axis in a group tag
+    
+		svg.append("g")
+    .attr("class", "y axis")
+    .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
+    
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #PUT IT ON THE PAGE
+
+          ##ADD LINE
+
+          Append the path, bind the data, and call the line generator 
+          
+		svg.append("path")
+    .datum(bikeshare) //  Binds data to the line 
+    .attr("class", "line") // Assign a class for styling 
+    .attr("d", line) //  Calls the line generator 
+    .attr("transform", "translate(30, 0)")
+    
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #PUT IT ON THE PAGE
+
+          ##ADD DOTS
+
+          Appends a circle for each datapoint 
+          
+
+		svg.selectAll(".dot")
+    .data(bikeshare)
+    .enter().append("circle") // Uses the enter().append() method
+    .attr("class", "dot") // Assign a class for styling
+    .attr("cx", (d, i) => xScale(i) )
+    .attr("cy", (d) => yScale(d.duration_in_hours) )
+    .attr("r", 8)
+    .attr("transform", "translate(30, 0)")
+    
+
       </script>
     </section>
 
