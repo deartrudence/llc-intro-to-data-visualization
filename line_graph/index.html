@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Workshop Project 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+	</head>
+	<body>
+    <h1>Number of hours Bikeshare was used by month</h1>
+    <div id="chart"></div>
+		<script type="text/javascript">
+    // **** THE DATA ****
+
+		var bikeshare = [
+			{month: "Jan", duration_in_hours:	7441},
+			{month: "Feb", duration_in_hours:	8345},
+			{month: "Mar", duration_in_hours:	9071},
+			{month: "Apr", duration_in_hours:	20618},
+			{month: "May", duration_in_hours:	26635},
+			{month: "Jun", duration_in_hours:	40948},
+			{month: "Jul", duration_in_hours:	77591},
+			{month: "Aug", duration_in_hours:	79255},
+			{month: "Sep", duration_in_hours:	70381},
+			{month: "Oct", duration_in_hours:	46951},
+			{month: "Nov", duration_in_hours:	9204},
+			{month: "Dec", duration_in_hours:	25409}
+		]
+
+		//------------------------------------------------------------------------------
+
+		// **** THE SETUP ****
+
+		//  --> SPACING AND SIZES
+
+		// 1. Find minium and maximum values for hours in the bikeshare array
+
+
+		// Set up the spacing and sizing for the graph
+		// Use the margin convention practice
+
+
+
+		// --> SCALES
+
+
+		// 2. X scale will use the number of elements
+		// Scale band creates equally spaced points
+		// in this case there are 12 months and 12 datapoints (ie bikeshare.length)
+		// So, scaleBand spreads each datapoint out equally along the X axis (we use this function later when defniing the X axis)
+
+
+		// 3. Y scale will use the duration_in_hours datapoint
+		// Scale linear takes in the values from the dataset as the domain and scales it down (or up) to fit within the graph
+		// We're using this for the Y axis, so we want it to fit within the height.
+		// Also, we're using minDuration - 5000 and maxDuration + 5000, so that our datapoints don't touch the very top or bottom of the page (this is just visually pleasing)
+
+		// --> GENERATE LINE
+
+		// 4. d3's line generator
+		// this generator essentially loops through each data object in the array
+		// This sets the x values and the y values for the points that will make up the line
+		// For x we use the xScale, and since it's concerned with just the number of elements we pass it in the index value
+		// For y we use the yScale and it is concerned with the duration, so we pass in the duration_in_hours fromt the data object
+		//++++
+		// You may notice that we're not actually referencing the data in any way here.
+		// That is because we're creating a variable 'line', which will be a function, based on the info we give it.
+		// Later when create the actual SVG, we will will call this function to create the line
+
+
+		//------------------------------------------------------------------------------
+
+		// **** PUT IT ON THE PAGE ****
+
+		//  --> CREATE SVG
+
+		// 5. Add the SVG to the page
+		// Here we're telling d3 to grab the element with the id of chart and append an svg to it.
+		// Then we give it height and width attributes.  We use the height and width we set above and also add the margins we set above.
+		// The reason we need the margins is that we need room for the axes labels.  And it's also nice to have a bit of padding around the chart itself
+		// in theis example the chart size plus margin is the white space
+		// You'll notice that we also apend a 'g', g in svgs are for grouping and we'll be adding all the details of the chart into this group
+
+
+		//  --> X-AXIS
+
+		// 6. Call the x axis in a group tag
+		// We create a group and translate it to the bottom of the chart using the height attribute
+		// since everything in an SVG starts at the top left corner,  translating it the height will put it at the bottom of the chart.
+		// Then we set the axisBottom using the xScale we created above
+		//Finally we add ticks to the axis with the value of the month
+
+		//  --> Y-AXIS
+
+		// 7. Call the y axis in a group tag
+
+		// --> ADD LINE
+
+		// 8. Append the path, bind the data, and call the line generator
+
+		// --> ADD DOTS
+
+		// 9. Appends a circle for each datapoint
+    </script>
+  </body>
+</html>

@@ -79,6 +79,11 @@
           </li>
           <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a><p>&nbsp;</p></li>
           </li>
+          <li>Local Web Server: <a href="https://www.npmjs.com/package/http-server">http-server</a>
+            <ul>
+              <li>Download and install <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">node.js</a> first</li>
+            </ul>
+          </li>
         </ol>
       </div>
       <footer>
@@ -125,13 +130,13 @@
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
             #Today's Projects
-    
-            First we'll create a line chart.
-            <img src="./framework/img/workshop/linechart.png" alt=""> 
-            Then we'll create a bubble chart.
-            <img src="./framework/img/workshop/bubblechart.png" alt=""> 
 
-            
+            <p>First we'll create a line chart.</p>
+            <img src="./framework/img/workshop/linechart.png" alt="" style="width: 50%">
+            <p>Then we'll add it to a report and add a pie chart.</p>
+            <img src="./framework/img/workshop/report.png" alt="" style="width: 50%">
+
+
           </script>
     </section>
 
@@ -142,13 +147,11 @@
         We will learn a whole pile of things:
 
         * Review JavaScript
-        * Learn about Types of Graphs 
+        * Learn about Types of Graphs
         * Learn basic SVG shapes
-        * D3 scales and axis
+        * D3 scales, axis, generators, and layouts
         * Create graphs from code!
 
-        <p>We can also use what we'll learn today to create something fun, like this: <a href="https://bl.ocks.org/mbostock">Bl.ocks</a>, or something really cool, like this: <a href="https://pudding.cool/">The Pudding</a></p><!-- .element: class="delayed" -->
-    
       </script>
     </section>
 
@@ -168,7 +171,7 @@
 
         D3.js is a library created by <a href="https://bost.ocks.org/mike/" target="_blank">Mike Bostock</a> (<a href="https://twitter.com/mbostock?lang=en" target="_blank">twitter</a>) that assists in the creation of datavisulations for the web.
 
-        This library takes care of the calculations such as scaling and arching, as well as DOM manipulation and transitions
+        This library takes care of the calculations such as scaling and arching, as well as DOM manipulation and transitions.
 
         D3.js creates SVGs that when combined with HTML &CSS produce responsive websites for sharing complex information.  D3 also uses data-driven transformations and transitions to showcase changes to the data.
       </script>
@@ -177,25 +180,43 @@
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #Let's Talk about Graphs
-        
+
+        Graphs show relationships between one or more variables.
+
+        Graphs have:
+
+        * **Axis**: reference line on a graph that depicts potential values of a variable
+        * **Scales**: relation between the units you're using and their representation on the graph
+
+        <img src="./framework/img/workshop/axis.png" alt="" style="width: 25%">
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Types of Graphs
+
         ##Bar chart
-        show numbers that are independent of each other.
-         <img src="./framework/img/workshop/barchartex.png" alt="" style="width: 50%"> 
+        Show numbers that are independent of each other
+         <img src="./framework/img/workshop/barchartex.png" alt="" style="width: 50%">
+
         http://www.typesofgraphs.com/bar-graphs/
 
 
         ##Line chart
-        show you how numbers have changed over time.
-         <img src="./framework/img/workshop/linechartex.png" alt="" style="width: 50%"> 
+        Show you how numbers have changed over time
+         <img src="./framework/img/workshop/linechartex.png" alt="" style="width: 50%">
+
         http://www.typesofgraphs.com/line-graphs/
 
 
         ##Pie chart
-        show you how a whole is divided into different parts. 
-         <img src="./framework/img/workshop/piechartex.png" alt="" style="width: 50%"> 
+        Show you how a whole is divided into different parts.
+         <img src="./framework/img/workshop/piechartex.png" alt="" style="width: 50%">
 
         http://www.typesofgraphs.com/pie-charts/
-           
+
       </script>
     </section>
 
@@ -211,6 +232,8 @@
       <script type="text/template">
         #D3 Examples
 
+        <p>We can use what we'll learn today to create something fun, like this:
+
         * <a href="https://pudding.cool/">pudding.cool</a>
         * <a href="https://www.informationisbeautifulawards.com/news/118-the-nyt-s-best-data-visualizations-of-the-year">New York Times</a>
 
@@ -218,92 +241,6 @@
           <img style="max-width:750px;"src="./framework/img/D3NYTTaxRates.png" alt="">
         </a>
 
-      </script>
-    </section>
-
-    <section class="slide title centered" data-markdown>
-      <script type="text/template">
-        #SVGs 
-        ##(Scalable Vector Graphics)
-
-        
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #What is an SVG?
-
-        Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation.
-
-        It is essentially an image written in code that can also be manipulated by code.
-
-        It scales without any loss of image quality and because it is code it can be created by a program.
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-            #SVG v PNG?
-    
-            ##PNG
-            PNGs will pixelate if you try to make them bigger
-            <img src="./framework/img/workshop/pngex.png" alt="" > 
-
-            ##SVG
-            SVG are scalable.  Because SVGs are essentially code and the code decides how to render the image.
-
-            <img src="./framework/img/workshop/svgex.png" alt="" > 
-    
-          </script>
-    </section>
-
-    <section class="slide centered" data-markdown data-toc>
-      <script type="text/template">
-        #Example SVG
-            
-          <img src="./framework/img/svgcode.jpg" alt="">
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #Example SVG
-
-        Note that the tags are very similar to HTML  ```<svg></svg>```
-
-        An svg’s outside tag will be ```<svg></svg>```  and will contain attributes with data about the version as well as size and position. (x y viewbox).
-
-        Next we have the ```<path>``` tag.  These describe the lines and shapes that are part of the svg.  These contain attributes about styling such as fill and stroke.
-
-        They also contain the actual shape/line in the d attribute.
-
-        The `<g>`tag is used to group paths together and usually doesn’t have it’s own attributes.
-
-
-
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Rendering an SVG
-
-        The previous code results in the following image.  It can be displayed in Chrome browser like an HTML file if you want to see what it looks like.
-
-        As the name would imply, it is scalable, which means it will remain the same sharpness no matter how big it gets.  Also, because it’s code, it remains minimal in size (a few kbs - which is ideal for fast web pages)
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #SVGs and D3
-
-        What D3 does is it takes in our data and performs some mathematical calculations on that data and then creates SVGs in the forms of graphs that are then appended to the DOM.
-
-        The DOM is the Document Object Model, and all it really means is the HTML page.
       </script>
     </section>
 
@@ -331,8 +268,8 @@
 
     <section class="slide title" data-markdown>
       <script type="text/template">
-        #JavaScript !!
-  
+        #JavaScript !
+
       </script>
     </section>
 
@@ -374,7 +311,7 @@
 
       </script>
     </section>
-<!-- 
+<!--
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #What is Programming?
@@ -384,7 +321,7 @@
         The basic building blocks of programming include features such as variables, functions, objects or control structures such as if statements or loops.
 
         ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)
-        
+
       </script>
     </section> -->
     <section class="slide" data-markdown data-toc>
@@ -396,10 +333,10 @@
         We're going to get together in pairs or threes, and explain to eachother some JavaScript concepts.
 
         ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](https://media.giphy.com/media/1S0yAfcPjgCLS/giphy.gif)
-        
+
       </script>
     </section>
-    
+
     <section class="slide centered title" data-markdown>
       <script type="text/template">
         ##The console
@@ -463,8 +400,8 @@
     <section class="slide" data-markdown>
       <script type="text/template">
             #What is a Variable
-    
-            Have a different person in your group explain to people what a variable is.
+
+            Have a different person in your group explain to people what a variable is
 
             * How do we define them?
             * Why do we use them?
@@ -529,24 +466,24 @@
 
         * so variable names are also case sensitive
 
-        
+
       </script>
     </section> -->
-    
+
     <!-- <section class="slide" data-markdown>
       <script type="text/template">
         # Good Variable Naming
-        
-        Use a descriptive names: 
-        
+
+        Use a descriptive names:
+
         var firstName; ← Clear that first name will go here.
-    
+
         var fn; ← Not as obvious as firstName.
-    
+
         var x; ← Not clear at all.
       </script>
     </section> -->
-<!--     
+<!--
     <section class="slide title" data-markdown>
       <script type="text/template">
         # Variable Types
@@ -622,10 +559,10 @@
 
       var endingValue = startingValue * multiplier;
 
-        To the right of the ‘=’ startingValue * multiplier; is called an expression.  
-        
-        The variable stores the evaluation of that expression.  
-        
+        To the right of the ‘=’ startingValue * multiplier; is called an expression.
+
+        The variable stores the evaluation of that expression.
+
         In this case 5 * 2 is 10, so the variable endingValue will return a value of 10.
 
       </script>
@@ -735,7 +672,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Using Methods 
+        #Using Methods
 
           One way to access methods on an Object is dot notation.
 
@@ -823,6 +760,90 @@
       </script>
     </section> -->
 
+    <section class="slide title centered" data-markdown>
+      <script type="text/template">
+        #SVGs
+        ##(Scalable Vector Graphics)
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #What is an SVG?
+
+        Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation.
+
+        It is essentially an image written in code that can also be manipulated by code.
+
+        It scales without any loss of image quality and because it is code it can be created by a program.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+            #SVG v PNG?
+
+            ##PNG
+            PNGs will pixelate if you try to make them bigger
+
+            <img src="./framework/img/workshop/pngex.png" alt="" >
+
+            ##SVG
+            SVG are scalable.  Because SVGs are essentially code and the code decides how to render the image.
+
+            <img src="./framework/img/workshop/svgex.png" alt="" >
+
+          </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #Example SVG
+
+          <img src="./framework/img/svgcode.jpg" alt="">
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Example SVG
+
+        Note that the tags are very similar to HTML  ```<svg></svg>```
+
+        A svg’s outside tag will be ```<svg></svg>```  and will contain attributes with data about the version as well as size and position. (x y viewbox).
+
+        Next we have the ```<path>``` tag.  These describe the lines and shapes that are part of the svg.  These contain attributes about styling such as fill and stroke.
+
+        They also contain the actual shape/line in the d attribute.
+
+        The `<g>`tag is used to group paths together and usually doesn’t have it’s own attributes.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Rendering an SVG
+
+        The previous code results in the following image.  It can be displayed in Chrome browser like an HTML file if you want to see what it looks like.
+
+        As the name would imply, it is scalable, which means it will remain the same sharpness no matter how big it gets.  Also, because it’s code, it remains minimal in size (a few kbs - which is ideal for fast web pages)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #SVGs and D3
+
+        What D3 does is it takes in our data and performs some mathematical calculations on that data and then creates SVGs in the forms of graphs that are then appended to the DOM.
+
+        The DOM is the Document Object Model, and all it really means is the HTML page.
+      </script>
+    </section>
+
     <section class="slide centered" data-markdown>
       <script type="text/template">
         #Let's create some SVGs
@@ -843,8 +864,8 @@
         <rect
           x="0"
           y="0"
-          width="0"
-          height="0"
+          width="100"
+          height="50"
         >
         ```
       </script>
@@ -860,9 +881,9 @@
 
         ```
         <circle
-          cx="0"
-          cy="0"
-          r="0"
+          cx="100"
+          cy="100"
+          r="50"
         >
         ```
       </script>
@@ -879,26 +900,9 @@
         <line
           x1="0"
           y1="0"
-          x2="0"
-          y2="0"
-        >
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #SVG Line
-
-        * The x1- and y1-axis coordinates of the start of the line.
-        * The x2- and y2-axis coordinates of the end of the line.
-
-        ```
-        <line
-          x1="0"
-          y1="0"
-          x2="0"
-          y2="0"
+          x2="200"
+          y2="200"
+          style="stroke:rgb(255,0,0);stroke-width:2"
         >
         ```
       </script>
@@ -949,13 +953,14 @@
 
       const minDuration = d3.min(bikeshare, (d) => d.duration_in_hours)
       const maxDuration= d3.max(bikeshare, (d) => d.duration_in_hours)
- 
+
 
       console.log("min", minDuration, "max", maxDuration)
 
         Set up the spacing and sizing for the graph
-        Use the margin convention practice 
-        
+
+        Use the margin convention practice
+
       const margin = {top: 70, right: 70, bottom: 70, left: 70}
       const width = window.innerWidth / 2
       const height = 450
@@ -970,12 +975,12 @@
             *** SCALES - X Scale ***
 
 
-            Scale band creates equally spaced points in this case there are 12 months and 12 datapoints (ie bikeshare.length)
+            Scale band creates equally spaced points. In this case there are 12 months and 12 datapoints (ie bikeshare.length).
 
-            So, scaleBand spreads each datapoint out equally along the X axis (we use this function later when defniing the X axis)
+            So, scaleBand spreads each datapoint out equally along the X axis (we use this function later when defining the X axis).
 
-             X scale will use the number of elements
-          
+             X scale will use the number of elements.
+
 		  const xScale = d3.scaleBand()
         .domain(d3.range(bikeshare.length))
         .range([0, width])
@@ -985,54 +990,60 @@
 
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
           #The Setup
 
             *** SCALES - Y Scale ***
 
+            Y scale will use the `duration_in_hours` datapoint.
 
-            Y scale will use the duration_in_hours datapoint
+            Scale linear takes in the values from the dataset as the domain and scales it down (or up) to fit within the graph.
 
-            Scale linear takes in the values from the dataset as the domain and scales it down (or up) to fit within the graph
-            
             We're using this for the Y axis, so we want it to fit within the height.
-            
-            Also, we're using minDuration - 5000 and maxDuration + 5000, so that our datapoints don't touch the very top or bottom of the page (this is just visually pleasing)
-            
+
+            Also, we're using `minDuration - 5000` and `maxDuration + 5000`, so that our datapoints don't touch the very top or bottom of the page (this is just visually pleasing).
+
         const yScale = d3.scaleLinear()
-        .domain([minDuration - 5000, maxDuration + 5000]) // input 
-        .range([height, 0]); // output 
+        .domain([minDuration - 5000, maxDuration + 5000]) // input
+        .range([height, 0]); // output
 
         console.log(yScale(5000))
 
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
           #Generate Line
 
 
-          ##D3's line generator 
-          This generator essentially loops through each data object in the array.  This sets the x values and the y values for the points that will make up the line
-          
-          For x we use the xScale, and since it's concerned with just the number of elements we pass it in the index value
-          
-          For y we use the yScale and it is concerned with the duration, so we pass in the duration_in_hours from the data object
+          ##D3's line generator
+          This generator essentially loops through each data object in the array.  This sets the x values and the y values for the points that will make up the line.
 
-          ++++
-          You may notice that we're not actually referencing the data in any way here.
-          
-          That is because we're creating a variable 'line', which will be a function, based on the info we give it.
-          
-          Later when create the actual SVG, we will will call this function to create the line
+          For x we use the xScale, and since it's concerned with just the number of elements we pass it in the index value.
+
+          For y we use the yScale and it is concerned with the duration, so we pass in the `duration_in_hours` from the data object.
 
 		const line = d3.line()
-    .x((d, i) => {console.log('line', d); return xScale(i); }) 
-    .y((d) => yScale(d.duration_in_hours) ) 
+    .x((d, i) => {console.log('line', d); return xScale(i); })
+    .y((d) => yScale(d.duration_in_hours) )
     .curve(d3.curveMonotoneX) // apply smoothing to the line
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          #Generate Line ... but not yet on the page
+
+          You may notice that we're not actually referencing the data in any way yet.
+
+          That is because we're creating a variable 'line', which will be a function, based on the info we give it.
+
+          Later when we create the actual SVG, we will call the `line` function we wrote to create the line.
 
       </script>
     </section>
@@ -1041,15 +1052,15 @@
       <script type="text/template">
           #PUT IT ON THE PAGE
 
-          ##Add the SVG to the page 
+          ##Add the SVG to the page
           Here we're telling d3 to grab the element with the id of chart and append an svg to it.
 
           Then we give it height and width attributes.  We use the height and width we set above and also add the margins we set above.
 
-          The reason we need the margins is that we need room for the axes labels.  And it's also nice to have a bit of padding around the chart itself in theis example the chart size plus margin is the white space.
+          The reason we need the margins is that we need room for the axes labels.  And it's also nice to have a bit of padding around the chart itself in this example the chart size plus margin is the white space.
 
           You'll notice that we also apend a 'g', g in svgs are for grouping and we'll be adding all the details of the chart into this group
-    
+
 
 		const svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -1059,21 +1070,21 @@
 
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
           #PUT IT ON THE PAGE
 
           ##X-AXIS
 
-          Call the x axis in a group tag
+          Call the x axis in a group tag.
 
           We create a group and translate it to the bottom of the chart using the height attribute since everything in an SVG starts at the top left corner,  translating it the height will put it at the bottom of the chart.
 
           Then we set the axisBottom using the xScale we created above.
 
           Finally we add ticks to the axis with the value of the month.
-    
+
 
 		svg.append("g")
     .attr("class", "x axis")
@@ -1090,41 +1101,41 @@
           ##Y-AXIS
 
           Call the y axis in a group tag
-    
+
 		svg.append("g")
     .attr("class", "y axis")
     .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
-    
+
 
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
           #PUT IT ON THE PAGE
 
           ##ADD LINE
 
-          Append the path, bind the data, and call the line generator 
-          
+          Append the path, bind the data, and call the line generator
+
 		svg.append("path")
-    .datum(bikeshare) //  Binds data to the line 
-    .attr("class", "line") // Assign a class for styling 
-    .attr("d", line) //  Calls the line generator 
+    .datum(bikeshare) //  Binds data to the line
+    .attr("class", "line") // Assign a class for styling
+    .attr("d", line) //  Calls the line generator
     .attr("transform", "translate(30, 0)")
-    
+
 
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
           #PUT IT ON THE PAGE
 
           ##ADD DOTS
 
-          Appends a circle for each datapoint 
-          
+          Appends a circle for each datapoint
+
 
 		svg.selectAll(".dot")
     .data(bikeshare)
@@ -1134,7 +1145,7 @@
     .attr("cy", (d) => yScale(d.duration_in_hours) )
     .attr("r", 8)
     .attr("transform", "translate(30, 0)")
-    
+
 
       </script>
     </section>
@@ -1142,75 +1153,192 @@
     <section class="slide centered" data-markdown>
       <script type="text/template">
         #Exercise as group (90 minutes)
+        ##Create a sample report
 
-        ![Example scatterplot plotting temperature and rainfall by month](framework/img/workshop/example_scatterplot.png)
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Create an SVG
-
-        Before you can draw anything, you must create an SVG element. The SVG element is a canvas on which your visuals are rendered. Remember to specify width and height of the SVG element.
-
-        ```
-        var svg = d3.select("body")
-          .append("svg")
-          .attr("width", w)
-          .attr("height", h);
-        ```
+        ![Example technology and labour report](framework/img/workshop/report.png)
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #A dataset can be an array of objects.
+        # We are going to add multiple graphs to one page
 
+        1. To keep our code clean, let's add javascript modules
+
+          **Modules** are small units of independent, reusable code
+
+        2. In the same folder (`technology_labour_report`) as the `index.html` file, run `http-server` from your console
+
+          **Make sure** you have <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">node</a> and <a href="https://www.npmjs.com/package/http-server">http-server</a> installed first
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #The Data
+
+        We will look at the number of professionals employed in Canada by year.
+
+    var dataset = [
+    	{year: "2011", professionals_employed:	534600},
+    	{year: "2012", professionals_employed:	542000},
+    	{year: "2013", professionals_employed:	551800},
+    	{year: "2014", professionals_employed:	561200},
+    	{year: "2015", professionals_employed:	584900},
+    	{year: "2016", professionals_employed:	594900},
+    ]
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Let's reuse our line graph code but swap the data!
+
+        1. Copy your javascript code used to generate the line graph in Exercise 1
+
+        2. Paste this javascript in `line_graph.js` within the `technology_labour_report` folder
+
+        3. Find and replace the variable names:
+          * bikeshare -> dataset
+          * months -> year
+          * duration_in_hours -> professionals_employed
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        #Magic
+
+        ![Michelle Tanner waves a wand and says "Abracadabra".](framework/img/workshop/abracadabra.gif)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercise in pairs (45 minutes)
+
+        # Let's create a pie chart
+
+        Before you can draw anything, you must create an SVG element.
+
+        **Remember** to specify width and height of the SVG element.
+
+        To ensure our pie chart is centered on our canvas, we create an inner svg `<g>`element
+        and transform/translate to the middle of our canvas.
+
+        ```
+        var width = window.innerWidth / 2;
+        var height = 450;
+
+        var svg = d3.select("#pieChart").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Set your dataset to a variable
+
+        We will look at the number of technology jobs by industry.
         ```
         var dataset = [
-          { label: "Jan", temperature: -3, rainfall: 40 },
-          { label: "Feb", temperature: -3, rainfall: 40 },
-          { label: "Mar", temperature: 1, rainfall: 40 },
-          { label: "Apr", temperature: 7, rainfall: 50 },
-          { label: "May", temperature: 14, rainfall: 30},
-          { label: "Jun", temperature: 16, rainfall: 40 },
-          { label: "Jul", temperature: 21, rainfall: 60 },
-          { label: "Aug", temperature: 21, rainfall: 50 },
-          { label: "Sep", temperature: 18, rainfall: 40 },
-          { label: "Oct", temperature: 11, rainfall: 40 },
-          { label: "Nov", temperature: 5, rainfall: 50 },
-          { label: "Dec", temperature: -1, rainfall: 20}
+          { label: "communication services", number_of_jobs: 23 },
+          { label: "technology manufacturing", number_of_jobs: 9 },
+          { label: "technology wholesaling", number_of_jobs: 10 },
+          { label: "software and computer services", number_of_jobs: 58 },
         ]
         ```
 
       </script>
     </section>
 
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Generate Shapes
+
+        While the lines of a line chart are easy enough to generate directly using SVGs, slices of a pie graph are more complex. We will use D3's shape generator `arc`.
+
+        The `arc` generator requires two inputs `outerRadius` and `innerRadius`:
+
+          1. To make a pie chart set `innerRadius` to 0. *If you want to build a donut chart set the `innerRadius` to be greater than zero*.
+          2. Set `outerRadius` to the minimum value of our svg's width or height divided by 2
+
+          ```
+          var radius = Math.min(width, height) / 2;
+
+          var arc = d3.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(0);
+          ```
+      </script>
+    </section>
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #Create a scatterplot
+        #Layouts
 
-        First let's plot temperature by month.
+        D3 layout helpers are functions
 
-        To create a plot for each month:
+        We will use the `pie()` helper to compute the start and end angles of our arcs for each technology offering
+
+        Each arc represents a slice of our pie graph
+
+          ```
+          var pie = d3.pie()
+              .value(function(d) { return d.number_of_jobs; });
+          ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Create placeholders
+
+        Next, we create a `<g>`tag for each data category.
+
+        **Remember** the `<g>`tag is used to group paths together and usually doesn’t have it’s own attributes.
+
+        Essentially we loop through each data object in the array and append a `<g>`tag to our `svg`.
+
+          ```
+          var g = svg.selectAll(".arc")
+              .data(pie(data))
+            .enter().append("g")
+              .attr("class", "arc");
+          ```
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Put it on the page
+
+        We are ready to draw the arcs of our pie chart!
+
+        Append a `<path>` svg element to each placeholder representing a technology industry.
+
+        Just like the `<rect>` svg element, `<path>` requires attributes to define its shape.
+
+        The `arc` function is responsible for computing the `<path>` attributes.
+
+        The `<path>` svg elements are the slices of our pie chart.
 
         ```
-        svg.selectAll("circle")
-  				.data(dataset)
-  				.enter()
-  				.append("circle")
-  				.attr('cy', (d) => yScale(d.temperature))
-  				.attr('cx', (d,i) => xScale(i))
-  				.attr('r', 20)
+        g.append("path")
+            .attr("d", arc)
+            .style("fill", "00204a");
         ```
-
-        * First, select all `circles` inside the svg (currently, there are none... but, just wait!).
-        * Next, `data(dataset)` sees there are 12 values in the dataset and passes this values to `enter()` which creates a placeholder for each value, if a circle doesn't exist.
-        * Then, `append("circle")` inserts a circle for each placeholder/value.
-        * Finally, we define the cx and cy values to plot the circle on the graph.
       </script>
     </section>
 
@@ -1218,244 +1346,22 @@
       <script type="text/template">
         #Scales
 
-        **Scales** are functions that map an input range to an output domain.
+        We can use a scale to add color to the different slices of our pie chart.
 
-        We will use a linearScale for our temperature values. For our x-axis, we can use a ordinal scale. `scaleBand` is a type of ordinal scale.
+        Setup an ordinal scale function for the colors that are going to be used for the different slices of data.
 
-        <a href="https://github.com/d3/d3-scale">See scale types</a>
+        For each slice of data use a different colour in the scale.
 
         ```
-        var padding = 50;
-        var minTemperature = d3.min(dataset, (d) => d.temperature);
-        var maxTemperature = d3.max(dataset, (d) => d.temperature);
+        var color = d3.scaleOrdinal()
+            .range(["#00204a", "#005792", "#448ef6", "#fdb44b"]);
 
-        var yScale = d3.scaleLinear()
-          .domain([minTemperature - 5, maxTemperature + 5])
-          .range([h - (padding * 2), padding]);
-        var xScale = d3.scaleBand()
-          .domain(d3.range(dataset.length))
-          .range([padding * 2, w]);
+        g.append("path")
+            .attr("d", arc)
+            .style("fill", function(d,i) { return color(i); });
         ```
       </script>
     </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #Add axis
-
-        Much like its scales, D3’s axes are actually functions whose parameters you define.
-
-        There are four different axis function constructors, each one corresponding to a different orientation and placement of labels: d3.axisTop, d3.axisBottom, d3.axisLeft, and d3.axisRight.
-
-        We will use d3.axisBottom for our x-axis and d3.axisLeft for our y-axis. We pass our scales in as an argument to the axis functions.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #Add axis - cont'd
-        * To draw the axis on the page, append a container to you SVG and call your axis function.
-        * Apply a transformation to position your axis correctly on the page. <a href="https://github.com/d3/d3-axis">You can add ticks and format them as well</a>.
-
-        ```
-        var yAxis = d3.axisLeft(yScale).ticks(5);
-        var xAxis = d3.axisBottom(xScale).tickFormat("");
-
-        // Add yAxis
-        svg.append("g")
-          .attr("class", "axis")
-          .attr("transform", "translate(" + padding + ",0)")
-          .call(yAxis);
-
-        // yAxis label
-        svg.append("text")
-          .attr("class", "axisLabel")
-          .attr("transform", "rotate(-90)")
-          .attr("y", 0)
-          .attr("x",0 - (h / 2))
-          .attr("dy", 20)
-          .style("text-anchor", "middle")
-          .text("Temperature");
-
-        // Add xAxis
-        svg.append("g")
-          .attr("class", "axis")
-          .attr("transform", "translate(-" + padding + "," + (h - (padding * 2)) + ")")
-          .call(xAxis);
-        ```
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #Add labels
-
-        To add labels, add text elements to your SVG element.
-
-        ```
-        // xAxis label
-        svg.append("text")
-          .attr("class", "axisLabel")
-          .attr("transform","translate(" + (w/2) + " ," + (h - 40) + ")")
-          .style("text-anchor", "middle")
-          .text("Month");
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #More visualization
-
-        Change the radius of your circle, to represent another datapoint like rainfall. Hint: A circle SVG has a r attribute and D3 has a rScale.
-
-        ```
-        var rScale = d3.scaleLinear()
-          .domain([0, d3.max(dataset, (d) => d.rainfall)])
-          .range([0, 50]);
-
-        ...
-        .append("circle")
-        .attr('r', (d) => rScale(d.rainfall))
-        .attr("fill", function(d) {
-          if (d.temperature > (range * 2 / 3)) {
-            return "rgba(16, 79, 252, 0.7)";
-          } else if (d.temperature >  (range * 1 / 3))  {
-            return "rgba(66, 175, 240, 0.7)";
-          } else {
-            return "rgba(21, 210, 252, 0.7)";
-          }
-        })
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Adding events
-
-        Add tooltips when hovering over each circle. There are many ways to do this! Try adding and removing classes when hovering over circles.
-
-        Add HTML
-        ```
-        <div id="tooltip" class="hidden">
-          <p><strong>Temperature: </strong><span id="value">100</span>°C</p>
-          <p><strong>Rainfall: </strong><span id="value">100</span>mm</p>
-        </div>
-        ```
-
-        Add JS
-        ```
-        svg.selectAll("circle")
-        .on("mouseover", function(d) {
-          var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale.bandwidth() / 2;
-          var yPosition = parseFloat(d3.select(this).attr("cy")) + padding;
-          //Update the tooltip position and value
-          d3.select("#tooltip")
-            .style("left", xPosition + "px")
-            .style("top", yPosition + "px")
-            .select("#value")
-            .text(d.temperature);
-          //Show the tooltip
-          d3.select("#tooltip").classed("hidden", false);
-        })
-        .on("mouseout", function() {
-         //Hide the tooltip
-         d3.select("#tooltip").classed("hidden", true);
-        })
-        ```
-
-        Add CSS
-
-        ```
-        #tooltip {
-          position: absolute;
-          width: 200px;
-          height: auto;
-          padding: 10px;
-          background-color: white;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          border-radius: 10px;
-          -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-          -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-          pointer-events: none;
-        }
-         #tooltip.hidden {
-          display: none;
-        }
-         #tooltip p {
-          margin: 0;
-          font-family: sans-serif;
-          font-size: 16px;
-          line-height: 20px;
-        }
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Exercise in pairs (45 minutes)
-
-        * Let's create an area chart
-
-        <ol>
-          <li>
-            <a href="https://bost.ocks.org/mike/d3/workshop/stocks.json">JSON Dataset - don't forget to parse the dates</a>
-          </li>
-          <li>
-            <a href="https://github.com/d3/d3-shape#area">Generate an area using d3.area</a>
-          </li>
-          <li>
-            <a href="https://github.com/d3/d3-scale#linear-scales">Try scaleTime() for x-axis</a>
-          </li>
-          <li>
-            <a href="https://github.com/d3/d3-scale#scaleTime">Try scaleLinear() for y-axis</a>
-          </li>
-        </ol>
-
-        ----
-
-        ## <a href="https://www.kaggle.com/">Want to plot different data?</a>
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Parsing the data
-
-        JSON is typed, but you must still parse dates.
-
-        ```
-        var format = d3.time.format("%b %Y");
-
-        d3.json("stocks.json", function(stocks) {
-          stocks.forEach(function(d) {
-            d.date = format.parse(d.date);
-          });
-        });
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #D3 Area
-
-        An area is defined by two bounding lines.
-
-        ```
-        var area = d3.area()
-            .x(function(d) { return x(d.date); })
-            .y1(function(d) { return y(d.value); })
-            .y0(y(0));
-        ```
-      </script>
-    </section>
-
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
@@ -1481,40 +1387,68 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #Layouts are data
+        #Add labels
 
-        * Layouts are reusable algorithms that generate data, not display.
-        * Layouts are varied. Each layout is different.
+        To add labels, add text elements to your SVG element.
+
+        For each text element appended, return the element's label (data attribute).
+
+        D3's `arc.centroid()` function computes the midpoint of the arc.
+
+        ```
+        //Create labels
+        g.append("text")
+            .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+            .style("text-anchor", "middle")
+            .text(function(d) { return d.data.label; });
+        ```
       </script>
     </section>
 
+
+
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Hierarchical Layouts:
+        #Adding events
 
-        *Examples:
-        <ul>
-          <li>
-            <a href="http://mbostock.github.io/d3/talk/20111018/treemap.html">treemap</a>
-          </li>
-          <li>
-            <a href="http://mbostock.github.io/d3/talk/20111018/tree.html">tree</a>
-          </li>
-          <li>
-            <a href="http://mbostock.github.io/d3/talk/20111018/pack.html">pack</a>
-          </li>
-          <li>
-            <a href="http://mbostock.github.io/d3/talk/20111018/partition.html">partition</a>
-          </li>
-          <li>
-            <a href="http://mbostock.github.io/d3/talk/20111018/pack.html">pack</a>
-          </li>
-          <li>
-            <a href="http://mbostock.github.io/d3/talk/20111018/pack.html">pack</a>
-          </li>
-        </ul>
+        Add tooltips when hovering over each slice of data. There are many ways to do this! Try adding and removing classes when hovering over circles.
+
+        Add HTML
+        ```
+  <div id="tooltip" class="hidden">
+		<b><p id="label"></p></b>
+		<p><span id="value"></span>%</p>
+	</div>
+        ```
+
+        Add JS
+        ```
+        g.append("path")
+          .attr("d", arc)
+          .style("fill", function(d,i) { return color(i); })
+          // Stretch Goal: Add events and labels
+          .on("mouseover", function(d) {
+            var xPosition = arc.centroid(d)[0] + (width / 2);
+            var yPosition = arc.centroid(d)[1] + (height / 2);
+            d3.select("#tooltip")
+              .style("left", xPosition + "px")
+              .style("top", yPosition + "px")
+              .select("#label")
+              .text(d.data.label)
+            d3.select("#tooltip")
+              .select("#value")
+              .text(d.data.number_of_jobs);
+            //Show the tooltip
+            d3.select("#tooltip").classed("hidden", false);
+
+          })
+          .on("mouseout", function() {
+           //Hide the tooltip
+           d3.select("#tooltip").classed("hidden", true);
+         });
+        ```
       </script>
     </section>
 
@@ -1536,7 +1470,7 @@
 
         * JavaScript arrays and functions
         * Basic SVG shapes
-        * D3 scales and axis
+        * D3 scales, axis, generators, and layouts
 
         <p>We can also use what we've learned today to create something fun, like this: <a href="https://bl.ocks.org/mbostock">Bl.ocks</a>, or something really cool, like this: <a href="https://pudding.cool/">The Pudding</a></p><!-- .element: class="delayed" -->
 

@@ -1,0 +1,211 @@
+/* NEWSLETTER */
+
+body {
+  margin: 40px;
+  font-family: 'Merriweather', serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 0px;
+  text-align: left;
+}
+
+.header {
+  background-color: #005792;
+  color: #FFF;
+  padding-top: 20px;
+}
+
+.title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.logo {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.logo img {
+  max-height: 100px;
+  fill: #FFF;
+  width: 200px;
+  float: right;
+}
+
+.chart-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center;
+}
+
+.text-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #EEE;
+  border-left: 10px solid #448ef6;
+  border-right: 10px solid #448ef6;
+  margin-bottom: 50px;
+}
+
+.chart-2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.text-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding-right: 50px;
+  margin-bottom: 50px;
+}
+
+.main-3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  border-top: 5px solid #005792;
+}
+
+hr {
+  border: 1px solid #DDD;
+}
+
+svg {
+  position: relative;
+}
+
+/* Line graph */
+
+body {
+		text-align: center;
+		color: #0D3A5C;
+	}
+	.line {
+		position: relative;
+	}
+
+	h1 {
+		/*color: white;*/
+		/*text-shadow: 1px 1px 2px rgba(0,0,0,0.2);*/
+	}
+	#chart {
+		background: white;
+		display: inline-block;
+		position: relative;
+	}
+
+
+	/* Need to remove the fill */
+	.line {
+	    fill: none;
+	    stroke: #ffab00;
+	    stroke-width: 3;
+	}
+
+/* 	.overlay {
+	  fill: none;
+	  pointer-events: all;
+	}
+ */
+	/* Style the dots by assigning a fill and stroke */
+	.dot {
+	    fill: #ffab00;
+	    stroke: #fff;
+	}
+
+	.dot:hover {
+		fill: #D1EAEB;
+	}
+
+	  .focus circle {
+	  fill: none;
+	  stroke: steelblue;
+	}
+	text {
+		font-size: 14px;
+		font-family: 'Poppins', sans-serif;
+	}
+
+
+/* PIE CHART */
+
+/* legend */
+
+.legend-scale ul {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  float: left;
+  list-style: none;
+}
+
+.legend-scale ul li {
+  font-size: 80%;
+  list-style: none;
+  margin-left: 0;
+  line-height: 18px;
+  margin-bottom: 2px;
+}
+
+ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 30px;
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+/* tooltip */
+
+#tooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  text-align: center;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}

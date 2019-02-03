@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Workshop Project 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+		  <div class="header title">
+				<h1>REPORT: Labour and Technology in Canada</h1>
+			</div>
+			<div class="header logo">
+				<img src="logo.svg" alt="Report logo">
+			</div>
+
+		  <div class="chart-1">
+				<div id="chart"></div>
+			</div>
+
+			<div class="text-1">
+				<h2>Number of professionals employed in Canada by year</h2>
+				<p>
+					The demand for technologists continue to grow in Canada. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+			</div>
+
+			<div class="chart-2">
+				<div id="pieChart"></div>
+				<div id="tooltip" class="hidden">
+					<b><p id="label"></p></b>
+					<p><span id="value"></span>%</p>
+				</div>
+			</div>
+
+			<div class="text-2">
+				<h2>Technology jobs are everywhere</h2>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+				<div class='legend-scale'>
+				  <ul class='legend-labels'>
+				    <li><span style='background:#00204a;'></span>communication services</li>
+				    <li><span style='background:#005792;'></span>technology manufacturing</li>
+				    <li><span style='background:#448ef6;'></span>technology wholesaling</li>
+				    <li><span style='background:#fdb44b;'></span>software and computer services</li>
+				  </ul>
+				</div>
+			</div>
+
+		  <div class="footer">
+				<p>Canadian ICT Sector Profile 2016</p>
+				<p>Icon created by Nithinan Tatah from the Noun Project</p>
+			</div>
+		</div>
+
+		<script type="module"src="line_graph.js"></script>
+		<script type="module"src="pie_chart.js"></script>
+	</body>
+</html>
